@@ -102,42 +102,71 @@ h1, h2, h3, h4 {
 .placeholder-img::after { content: "🐾"; font-size: 2rem; opacity: 0.3; }
 
 /* --- HEADER --- */
-header {
-    background-color: var(--white);
-    border-bottom: 1px solid #eee;
-    padding: 1rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
 
-.nav-wrapper {
+.header-compacto {
+    height: 70px; /* Un poquito más de aire para que no se vea asfixiado */
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
-.logo {
-    font-family: var(--font-heading);
-    font-size: 1.8rem;
-    font-weight: 800;
-    color: var(--color-green);
-    letter-spacing: -1px;
+/* Forzar que el contenedor de acciones no se rompa */
+.acciones-header {
+    display: flex !important;
+    flex-direction: row !important; /* Obliga a que sea horizontal */
+    flex-wrap: nowrap !important;  /* Prohibido saltar de línea */
+    align-items: center;
+    gap: 15px; /* Espacio exacto entre Entrar y el Botón */
 }
 
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-}
-
-nav a {
-    text-decoration: none;
-    color: var(--text-main);
+.link-entrar {
+    font-size: 14px;
     font-weight: 600;
-    font-size: 0.95rem;
+    color: var(--color-blue);
+    text-decoration: none;
+    white-space: nowrap; /* Evita que "Entrar" se mueva */
 }
-nav a:hover, nav a.active { color: var(--color-green); }
+
+.header-compacto .btn-cta {
+    padding: 8px 15px; /* Padding reducido al mínimo necesario */
+    font-size: 13px;
+    white-space: nowrap;
+    border-radius: 4px;
+    min-width: 110px; /* Asegura que el botón tenga un tamaño consistente */
+}
+
+/* Si el menú de en medio (Inicio, Adopta...) es muy largo y empuja los botones, 
+   bajamos un poco su tamaño de letra */
+.header-compacto .nav-link {
+    font-size: 13px;
+    padding: 0 10px !important;
+}
+
+/* Ajuste para que el menú desplegable de móvil se vea bien */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        position: absolute;
+        top: 60px; /* Justo debajo del header */
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 20px;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+    .nav-item {
+        border-bottom: 1px solid #f0f0f0;
+        padding: 10px 0;
+    }
+    /* Mantenemos botones de la derecha siempre fijos */
+    .acciones-header {
+        order: 2; /* Los mantiene a la derecha del logo/hamburguesa si es necesario */
+    }
+}
+
+.px-15 {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}
 
 /* --- HERO SECTION --- */
 .hero {
@@ -364,3 +393,56 @@ img {
 /* Ajuste para iconos y avatares */
 .icon-img { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; }
 .avatar-img { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid #fff; }
+
+/* --- CONFIGURACIÓN BASE (Desktop) --- */
+.header-compacto {
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.logo-img { height: 30px; width: auto; }
+
+.acciones-header {
+    display: flex !important;
+    flex-wrap: nowrap !important; /* Prohíbe el salto de línea */
+    gap: 15px;
+}
+
+/* --- TABLET (Menos de 992px) --- */
+@media (max-width: 991px) {
+    .header-compacto {
+        height: 65px;
+    }
+    /* Reducimos un poco el espacio para que quepa todo */
+    .acciones-header {
+        gap: 10px;
+    }
+    .link-entrar {
+        font-size: 13px;
+    }
+}
+
+/* --- MÓVIL (Menos de 576px) --- */
+@media (max-width: 575px) {
+    .header-compacto {
+        height: 60px;
+        padding: 0 10px; /* Ajustamos márgenes laterales */
+    }
+    
+    .logo-img { height: 25px; } /* Logo más pequeño en móvil */
+
+    .link-entrar {
+        font-size: 12px;
+    }
+
+    .header-compacto .btn-cta {
+        padding: 6px 12px; /* Botón más compacto */
+        font-size: 11px;
+        min-width: auto; /* Quitamos el ancho mínimo */
+    }
+    
+    .acciones-header {
+        gap: 8px;
+    }
+}
