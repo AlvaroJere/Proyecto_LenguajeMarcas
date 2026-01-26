@@ -333,30 +333,135 @@ h1, h2, h3, h4 {
 .author { font-weight: 700; margin-top: 0.5rem; }
 
 /* --- FOOTER --- */
+
 footer {
-    background-color: #222;
-    color: #ccc;
-    padding: 4rem 0 0;
-    font-size: 0.9rem;
+    background-color: #1a1a1a; /* Fondo oscuro sólido */
+    border-top: none !important; /* Quitamos el borde para que el bloque de color sea limpio */
+    margin-top: 60px !important;
+    padding-top: 40px !important; /* Más aire arriba en px */
+    padding-bottom: 40px !important; /* Más aire abajo en px */
+    width: 100%; /* Asegura que cubra todo el ancho */
 }
-.footer-grid {
-    display: grid;
-    grid-template-columns: 1.5fr repeat(3, 1fr);
-    gap: 2rem;
-    padding-bottom: 3rem;
+
+/* Forzar que el contenedor interno mantenga el ancho de tu web */
+footer .container-footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.footer-col h4 { color: var(--white); margin-bottom: 1.2rem; }
-.footer-col ul { list-style: none; }
-.footer-col li { margin-bottom: 0.6rem; }
-.footer-col a { color: #ccc; text-decoration: none; transition: 0.3s; }
-.footer-col a:hover { color: var(--color-orange); }
-.footer-bottom { background: #111; padding: 1.5rem 0; text-align: center; font-size: 0.8rem; }
+
+/* Color de los textos (Copyright y otros) */
+footer .text-body-secondary {
+    color: #e0e0e0 !important; /* Gris muy claro/blanco roto */
+    font-size: 14px;
+    font-family: var(--font-body);
+}
+
+/* Estilo para los iconos de Redes Sociales */
+.social-footer span {
+    filter: brightness(0) invert(1); /* Truco Pro: Convierte emojis/iconos oscuros en blancos */
+    font-size: 22px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.social-footer a:hover span {
+    opacity: 1;
+    filter: none; /* Vuelve a su color original al pasar el ratón si lo prefieres */
+}
+
+/* Media query para móviles */
+@media (max-width: 768px) {
+    footer .container-footer {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+/* Ajuste para que en móvil los elementos se centren */
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    footer .justify-content-end {
+        justify-content: center !important;
+        padding-left: 0;
+    }
+}
+
+/* --- LOGO DEL FOOTER --- */
+
+.logo-footer-xl {
+    height: 60px; /* Tamaño grande y visible */
+    width: auto;
+    display: block; /* Eliminamos filtros de gris para que se vea a todo color */
+    filter: none; /* Si el logo es muy oscuro para el fondo negro, le damos un brillo extra */
+    filter: brightness(1.1); 
+    image-rendering: -webkit-optimize-contrast; /* Evita que se vea borroso */
+    transition: transform 0.3s ease;
+}
+
+.logo-footer-xl:hover {
+    transform: scale(1.1); /* Crece un poco al pasar el ratón */
+}
+
+/* Alineación del texto de copyright con el logo grande */
+footer .text-body-secondary {
+    margin-left: 10px;
+    font-size: 15px;
+    color: #ffffff !important; /* Blanco puro para legibilidad */
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .logo-footer-xl {
+        height: 40px; /* Un poco más pequeño en móviles para que no rompa el diseño */
+    }
+}
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
     .hero-grid, .stories-grid, .footer-grid { grid-template-columns: 1fr; }
     .nav-wrapper { flex-direction: column; gap: 1rem; }
     nav ul { flex-wrap: wrap; justify-content: center; gap: 1rem; }
+}
+
+/* --- ESTILO BLANCO PARA LOGO Y TEXTO DEL FOOTER --- */
+
+.footer-oscuro-total {
+    background-color: #121212;
+    color: #ffffff;
+    margin-top: 50px;
+}
+
+/* Forzar que el logo sea totalmente blanco */
+.logo-footer-xl {
+    height: 65px;
+    width: auto;
+    /* Este comando convierte el logo a blanco puro */
+    filter: brightness(0) invert(1); 
+    transition: transform 0.3s ease;
+}
+
+.logo-footer-xl:hover {
+    transform: scale(1.08) brightness(1.2); /* Brilla un poco más al pasar el ratón */
+}
+
+/* Forzar texto de copyright a blanco */
+.text-claro {
+    color: #ffffff !important; /* Blanco puro */
+    font-size: 14px;
+    opacity: 0.9; /* Un poco de transparencia para que no sea agresivo */
+}
+
+/* Borde superior sutil */
+.footer-oscuro-total .border-top {
+    border-top: 1px solid #444444 !important;
 }
 
 /* --- ESTILOS PARA IMÁGENES REALES --- */
