@@ -1,6 +1,6 @@
 /* --- VARIABLES DE MARCA ANAA --- */
 :root {
-    /* Paleta de colores según documento PDF */
+    
     --color-green: #2E7D32;  /* Verde protección/naturaleza */
     --color-blue: #1565C0;   /* Azul confianza/transparencia */
     --color-beige: #F5F5F0;  /* Beige/Blanco roto (limpieza/calma) */
@@ -99,7 +99,6 @@ h1, h2, h3, h4 {
     position: relative;
     overflow: hidden;
 }
-.placeholder-img::after { content: "🐾"; font-size: 2rem; opacity: 0.3; }
 
 /* --- HEADER --- */
 
@@ -157,10 +156,7 @@ h1, h2, h3, h4 {
         border-bottom: 1px solid #f0f0f0;
         padding: 10px 0;
     }
-    /* Mantenemos botones de la derecha siempre fijos */
-    .acciones-header {
-        order: 2; /* Los mantiene a la derecha del logo/hamburguesa si es necesario */
-    }
+
 }
 
 .px-15 {
@@ -226,7 +222,7 @@ h1, h2, h3, h4 {
     height: 400px;
     width: 100%;
 }
-.placeholder-hero { height: 100%; width: 100%; }
+
 
 /* --- ADOPTION SECTION --- */
 .adoption-section { padding: 4rem 0; }
@@ -330,7 +326,6 @@ h1, h2, h3, h4 {
 
 .story-list { display: flex; flex-direction: column; gap: 1.5rem; }
 .story-item { display: flex; gap: 1rem; align-items: center; background: var(--white); padding: 1rem; border-radius: var(--radius); }
-.icon-box { width: 60px; height: 60px; border-radius: 50%; flex-shrink: 0; background-color: #e0f2f1; }
 .story-item h4 { font-size: 1rem; color: var(--text-main); }
 .small-text { font-size: 0.85rem; color: var(--text-light); }
 
@@ -392,26 +387,7 @@ footer .text-body-secondary {
     filter: none; /* Vuelve a su color original al pasar el ratón si lo prefieres */
 }
 
-/* Media query para móviles */
-@media (max-width: 768px) {
-    footer .container-footer {
-        flex-direction: column;
-        gap: 20px;
-    }
-}
 
-/* Ajuste para que en móvil los elementos se centren */
-@media (max-width: 768px) {
-    footer {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
-    }
-    footer .justify-content-end {
-        justify-content: center !important;
-        padding-left: 0;
-    }
-}
 
 /* --- LOGO DEL FOOTER --- */
 
@@ -419,8 +395,6 @@ footer .text-body-secondary {
     height: 60px; /* Tamaño grande y visible */
     width: auto;
     display: block; /* Eliminamos filtros de gris para que se vea a todo color */
-    filter: none; /* Si el logo es muy oscuro para el fondo negro, le damos un brillo extra */
-    filter: brightness(1.1); 
     image-rendering: -webkit-optimize-contrast; /* Evita que se vea borroso */
     transition: transform 0.3s ease;
 }
@@ -452,16 +426,10 @@ footer .text-body-secondary {
 
 /* --- ESTILO BLANCO PARA LOGO Y TEXTO DEL FOOTER --- */
 
-.footer-oscuro-total {
-    background-color: #121212;
-    color: #ffffff;
-    margin-top: 50px;
-}
-
-/* Forzar que el logo sea totalmente blanco */
 .logo-footer-xl {
     height: 65px;
     width: auto;
+
     /* Este comando convierte el logo a blanco puro */
     filter: brightness(0) invert(1); 
     transition: transform 0.3s ease;
@@ -527,12 +495,6 @@ img {
 
 .logo-img { height: 30px; width: auto; }
 
-.acciones-header {
-    display: flex !important;
-    flex-wrap: nowrap !important; /* Prohíbe el salto de línea */
-    gap: 15px;
-}
-
 /* --- TABLET (Menos de 992px) --- */
 @media (max-width: 991px) {
     .header-compacto {
@@ -568,5 +530,28 @@ img {
     
     .acciones-header {
         gap: 8px;
+    }
+}
+
+/* Media query para móviles */
+@media (max-width: 768px) {
+    footer .container-footer {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+/* Ajuste para que en móvil los elementos se centren */
+@media (max-width: 768px) {
+    .footer-oscuro-total .container > div {
+        flex-direction: column; /* Solo forzamos el cambio de dirección al contenedor principal */
+        text-align: center;
+        gap: 20px;
+    }
+    
+    /* Centramos las redes sociales eliminando el empuje a la derecha */
+    .social-footer-final {
+        justify-content: center !important;
+        padding: 0;
     }
 }
