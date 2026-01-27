@@ -23,7 +23,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+main {
+    padding-top: 90px; /* Espacio para el header fijo */
+}
 body {
     font-family: var(--font-body);
     color: var(--text-main);
@@ -101,43 +103,35 @@ h1, h2, h3, h4 {
 }
 
 /* --- HEADER --- */
-
 .header-compacto {
-    height: 70px; /* Un poquito más de aire para que no se vea asfixiado */
+    /* Tu diseño original */
+    height: 90px;
     display: flex;
     align-items: center;
+    background-color: var(--white); /* Aseguramos que tenga fondo */
+    border-bottom: 1px solid #eee;
+
+    /* Nuevas propiedades para el efecto de ocultar */
+    position: fixed;   /* Cambiamos a fixed para que la animación funcione siempre */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1100;
+    transition: transform 0.4s ease-in-out; /* Velocidad de la animación */
 }
 
-/* Forzar que el contenedor de acciones no se rompa */
+/* Esta es la clase que el JavaScript activará */
+.header-hidden {
+    transform: translateY(-100%); 
+}
+
+/* El resto de tu código se mantiene igual */
 .acciones-header {
     display: flex !important;
-    flex-direction: row !important; /* Obliga a que sea horizontal */
-    flex-wrap: nowrap !important;  /* Prohibido saltar de línea */
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
     align-items: center;
-    gap: 15px; /* Espacio exacto entre Entrar y el Botón */
-}
-
-.link-entrar {
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--color-blue);
-    text-decoration: none;
-    white-space: nowrap; /* Evita que "Entrar" se mueva */
-}
-
-.header-compacto .btn-cta {
-    padding: 8px 15px; /* Padding reducido al mínimo necesario */
-    font-size: 13px;
-    white-space: nowrap;
-    border-radius: 4px;
-    min-width: 110px; /* Asegura que el botón tenga un tamaño consistente */
-}
-
-/* Si el menú de en medio (Inicio, Adopta...) es muy largo y empuja los botones, 
-   bajamos un poco su tamaño de letra */
-.header-compacto .nav-link {
-    font-size: 13px;
-    padding: 0 10px !important;
+    gap: 20px;
 }
 
 /* Ajuste para que el menú desplegable de móvil se vea bien */
@@ -187,6 +181,7 @@ h1, h2, h3, h4 {
 .hero {
     padding: 5rem 0;
     background-color: var(--color-beige); /* Fondo beige calmado */
+    margin-top: 70px; /* Espacio para el header fijo */
 }
 
 .hero-grid {
@@ -493,7 +488,7 @@ img {
     align-items: center;
 }
 
-.logo-img { height: 30px; width: auto; }
+.logo-img { height: 50px; width: auto; }
 
 /* --- TABLET (Menos de 992px) --- */
 @media (max-width: 991px) {
