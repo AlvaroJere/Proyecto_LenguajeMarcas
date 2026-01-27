@@ -168,6 +168,25 @@ h1, h2, h3, h4 {
     padding-right: 15px !important;
 }
 
+/* Solo para tablets y móviles (debajo de 992px) */
+@media (max-width: 991.98px) {
+    .navbar .container {
+        position: relative; /* Necesario para el centrado */
+    }
+
+    .acciones-header {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%); /* Centra los botones exactamente al medio */
+        margin: 0 !important;
+    }
+
+    /* Ajuste para que el logo y el menú no pisen los botones si el móvil es muy pequeño */
+    .logo-img {
+        max-width: 80px; 
+    }
+}
+
 /* --- HERO SECTION --- */
 .hero {
     padding: 5rem 0;
