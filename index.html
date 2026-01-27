@@ -41,86 +41,89 @@
   </nav>
 </header>
 
+    <!-- Sección Hero -->
+
     <section class="hero">
-        <div class="container hero-grid">
-            <div class="hero-text">
-                <h1>Asociación Nacional Amigos de los Animales</h1>
-                <p class="hero-subtitle">Protegiendo y dando hogar</p>
-                <p class="hero-desc">Trabajamos por el bienestar animal, la tenencia responsable y el fin del abandono. Tu ayuda salva vidas.</p>
-                
-                <div style="display: flex; gap: 1rem;">
-                    <a href="pages/adoptar.html" class="btn btn-cta">Adoptar</a>
-                    <button class="btn btn-outline">Colaborar</button>
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-12 col-lg-6 hero-text">
+                    <h1>Asociación Nacional Amigos de los Animales</h1>
+                    <p class="hero-subtitle">Protegiendo y dando hogar</p>
+                    <p class="hero-desc">Trabajamos por el bienestar animal, la tenencia responsable y el fin del abandono. Tu ayuda salva vidas.</p>
+                        <div class="d-flex gap-3">
+                            <a href="pages/adoptar.html" class="btn btn-cta">Adoptar</a>
+                            <button class="btn btn-outline">Colaborar</button>
+                        </div>
                 </div>
-            </div>
-            
-            <div class="hero-image-container">
-                <img src="img/perro1.png" alt="Perro feliz adoptado" class="hero-img">
+                <div class="col-12 col-lg-6">
+                    <div class="hero-image-container">
+                        <img src="img/perro1.png" alt="Perro feliz" class="img-fluid rounded shadow-lg">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="adoption-section">
+    <!-- Sección de animales en adopción -->
+    <section class="adoption-section py-5">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header text-center mb-5">
                 <h2 class="section-title">Nuestros animales en adopción</h2>
-                <ul class="filters">
-                    <li class="active">Todos</li>
-                    <li>Especie</li>
-                    <li>Edad</li>
-                    <li>Tamaño</li>
-                    <li>Sexo</li>
-                </ul>
             </div>
 
-            <div class="grid-4">
-                <article class="card">
-                    <img src="img/perro2.png" alt="Thor" class="card-header-img">
-                    <div class="card-content">
-                        <div class="card-title">Thor <span class="tag">Perro</span></div>
-                        <div class="card-info">Mestizo • 3 Años • Macho</div>
-                        <button class="btn-card">Ver ficha</button>
-                    </div>
-                </article>
-                <article class="card">
-                    <img src="img/gato1.png" alt="Mina" class="card-header-img">
-                    <div class="card-content">
-                        <div class="card-title">Mina <span class="tag">Gato</span></div>
-                        <div class="card-info">Común Europeo • 1 Año • Hembra</div>
-                        <button class="btn-card">Ver ficha</button>
-                    </div>
-                </article>
-                <article class="card">
-                    <img src="img/perro3.png" alt="Rex" class="card-header-img">
-                    <div class="card-content">
-                        <div class="card-title">Rex <span class="tag">Perro</span></div>
-                        <div class="card-info">Pastor • 5 Años • Macho</div>
-                        <button class="btn-card">Ver ficha</button>
-                    </div>
-                </article>
-                <article class="card">
-                    <img src="img/gato2.png" alt="Lola" class="card-header-img">
-                    <div class="card-content">
-                        <div class="card-title">Lola <span class="tag">Gato</span></div>
-                        <div class="card-info">Siamés • 2 Años • Hembra</div>
-                        <button class="btn-card">Ver ficha</button>
+            <div class="row g-4"> <div class="col-12 col-md-6 col-lg-3">
+                <article class="card h-100 shadow-sm">
+                    <img src="img/perro2.png" class="card-img-top img-cover" alt="Thor" style="height: 200px; object-fit: cover;">
+                    <div class="card-body d-flex flex-column text-center">
+                        <h5 class="card-title">Thor <span class="badge bg-light text-dark border">Perro</span></h5>
+                        <p class="card-text text-muted small">Mestizo • 3 Años • Macho</p>
+                        <button class="btn btn-card mt-auto">Ver ficha</button>
                     </div>
                 </article>
             </div>
-            
-            <div style="text-align: center; margin-top: 2rem;">
-                <button class="btn btn-primary">Ver todos los animales</button>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <article class="card h-100 shadow-sm">
+                    <img src="img/gato1.png" class="card-img-top img-cover" alt="Mina" style="height: 200px; object-fit: cover;">
+                    <div class="card-body d-flex flex-column text-center">
+                        <h5 class="card-title">Mina <span class="badge bg-light text-dark border">Gato</span></h5>
+                        <p class="card-text text-muted small">Común Europeo • 1 Año • Hembra</p>
+                        <button class="btn btn-card mt-auto">Ver ficha</button>
+                    </div>
+                </article>
             </div>
-        </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <article class="card h-100 shadow-sm">
+                    <img src="img/perro3.png" class="card-img-top img-cover" alt="Rex" style="height: 200px; object-fit: cover;">
+                    <div class="card-body d-flex flex-column text-center">
+                        <h5 class="card-title">Rex <span class="badge bg-light text-dark border">Perro</span></h5>
+                        <p class="card-text text-muted small">Pastor • 5 Años • Macho</p>
+                        <button class="btn btn-card mt-auto">Ver ficha</button>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <article class="card h-100 shadow-sm">
+                    <img src="img/gato2.png" class="card-img-top img-cover" alt="Lola" style="height: 200px; object-fit: cover;">
+                    <div class="card-body d-flex flex-column text-center">
+                        <h5 class="card-title">Lola <span class="badge bg-light text-dark border">Gato</span></h5>
+                        <p class="card-text text-muted small">Siamés • 2 Años • Hembra</p>
+                        <button class="btn btn-card mt-auto">Ver ficha</button>
+                    </div>
+                </article>
+            </div>
+        </div> 
     </section>
 
     <section class="values-section">
         <div class="container">
             <h2 class="section-title">Educación y Tenencia Responsable</h2>
-            <div class="stories-grid">
-                <article class="story-main">
-                    <div style="height: 250px; overflow: hidden; border-radius: 8px; margin-bottom: 1.5rem;">
-                         <img src="img/perroYgaato.png" alt="Familia con perro" class="img-cover">
+            <div class="row g-5"> <div class="col-12 col-lg-7">
+                <article class="story-main h-100">
+                    <div style="height: 300px; overflow: hidden; border-radius: 8px; margin-bottom: 1.5rem;">
+                        <img src="img/perroYgaato.png" alt="Familia con perro" class="img-cover w-100 h-100">
                     </div>
                     <div class="story-content">
                         <h3>¿Estás listo para adoptar?</h3>
@@ -128,26 +131,29 @@
                         <a href="#" class="link-more">Leer guía de adopción →</a>
                     </div>
                 </article>
-                <div class="story-list">
-                    <article class="story-item">
-                        <img src="img/perro4.png" class="icon-img" alt="Salud">
+            </div>
+
+            <div class="col-12 col-lg-5">
+                <div class="story-list d-flex flex-column gap-4">
+                    <article class="story-item d-flex align-items-center p-3 bg-white rounded shadow-sm">
+                        <img src="img/perro4.png" class="icon-img me-3" alt="Salud" style="width: 60px; height: 60px; object-fit: cover;">
                         <div>
-                            <h4>Beneficios de la esterilización</h4>
-                            <p class="small-text">Salud y control de población.</p>
+                            <h4 class="mb-1">Beneficios de la esterilización</h4>
+                            <p class="small text-muted mb-0">Salud y control de población.</p>
                         </div>
                     </article>
-                    <article class="story-item">
-                        <img src="img/perro5.png" class="icon-img" alt="Chip">
+                    <article class="story-item d-flex align-items-center p-3 bg-white rounded shadow-sm">
+                        <img src="img/perro5.png" class="icon-img me-3" alt="Chip" style="width: 60px; height: 60px; object-fit: cover;">
                         <div>
-                            <h4>Identificación con microchip</h4>
-                            <p class="small-text">Seguridad obligatoria y necesaria.</p>
+                            <h4 class="mb-1">Identificación con microchip</h4>
+                            <p class="small text-muted mb-0">Seguridad obligatoria y necesaria.</p>
                         </div>
                     </article>
-                    <article class="story-item">
-                        <img src="img/perro6.png" class="icon-img" alt="Nutricion">
+                    <article class="story-item d-flex align-items-center p-3 bg-white rounded shadow-sm">
+                        <img src="img/perro6.png" class="icon-img me-3" alt="Nutricion" style="width: 60px; height: 60px; object-fit: cover;">
                         <div>
-                            <h4>Nutrición adecuada</h4>
-                            <p class="small-text">Consejos veterinarios básicos.</p>
+                            <h4 class="mb-1">Nutrición adecuada</h4>
+                            <p class="small text-muted mb-0">Consejos veterinarios básicos.</p>
                         </div>
                     </article>
                 </div>
