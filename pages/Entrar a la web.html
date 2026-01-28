@@ -1,14 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Entrar | ANAA</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
 <body>
-<div class="container py-5">
+
+<!-- HEADER -->
+<header class="sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="../index.html">ANAA</a>
+    </div>
+  </nav>
+</header>
+
+<!-- CONTENIDO -->
+<main class="container py-5">
   <div class="row justify-content-center">
     <div class="col-md-5">
-      <h2 class="text-center mb-4">Iniciar sesión</h2>
-      <form>
-        <input class="form-control mb-3" type="email" placeholder="Email" required>
-        <input class="form-control mb-3" type="password" placeholder="Contraseña" required>
-        <button class="btn btn-success w-100">Entrar</button>
-      </form>
+      <div class="card shadow-sm">
+        <div class="card-body p-4">
+          <h2 class="text-center mb-4">Iniciar sesión</h2>
+
+          <form>
+            <div class="mb-3">
+              <input type="email" class="form-control" placeholder="Email" required>
+            </div>
+
+            <div class="mb-3">
+              <input type="password" class="form-control" placeholder="Contraseña" required>
+            </div>
+
+            <button class="btn btn-success w-100">Entrar</button>
+          </form>
+
+          <p class="text-center mt-3 small">
+            ¿No tienes cuenta?
+            <a href="registro.html">Hazte socio</a>
+          </p>
+        </div>
+      </div>
     </div>
   </div>
-</div>
-<body>
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-light mt-5">
+  <div class="container py-4 text-center">
+    <small>© 2024 ANAA – Amigos de los Animales</small>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
