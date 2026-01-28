@@ -577,3 +577,79 @@ img {
         padding: 0;
     }
 }
+
+    /*BOTONES BOOTSTRAP ADAPTADOS A ANAA*/
+    .btn-success {
+  background-color: var(--anaa-green);
+  border-color: var(--anaa-green);
+  font-weight: 600;
+}
+
+.btn-success:hover,
+.btn-success:focus {
+  background-color: var(--anaa-green-dark);
+  border-color: var(--anaa-green-dark);
+}
+.btn-success:active {
+  background-color: var(--anaa-green-darker);
+  border-color: var(--anaa-green-darker);
+}  
+
+/*FORMULARIOS (LOGIN, REGISTRO, CONTACTO)*/
+.form-control {
+  border-radius: 6px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.form-control:focus {
+  border-color: var(--anaa-green);
+  box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.25);
+}
+.btn-primary {
+  background-color: var(--anaa-green);
+  border-color: var(--anaa-green);
+  font-weight: 600;
+}   
+
+/*HEADER / NAVBAR*/
+.navbar {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.navbar .nav-link {
+  color: #333;
+  font-weight: 500;
+}
+
+.navbar .nav-link:hover {
+  color: var(--anaa-green);
+}
+.navbar .navbar-brand {
+  font-weight: 700;
+  color: var(--anaa-green);
+}   
+
+/*CARDS (LOGIN / REGISTRO)*/
+.card {
+  border-radius: 12px;
+}
+
+.card h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+.card-body {
+  font-family: 'Open Sans', sans-serif;
+}   
+
+/*FOOTER*/
+footer {
+  font-family: 'Open Sans', sans-serif;
+}
+
+footer.bg-dark {
+  background-color: var(--anaa-gray-dark) !important;
+}
+footer .text-white {
+  color: #f8f9fa !important;
+}   
