@@ -3,70 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adoptar - ANAA</title>
-    
+    <title>ANAA - Asociación Nacional Amigos de los Animales</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
     <link rel="stylesheet" href="../css/styles.css">
 </head>
+
 <body>
 
-<header class="header-compacto border-bottom sticky-top bg-white">
-  <nav class="navbar navbar-expand-lg navbar-light w-100">
-    <div class="container d-flex align-items-center justify-content-between">
-      
-      <a class="navbar-brand p-0" href="../index.html">
-        <img src="../img/ANAA.png" alt="ANAA" class="logo-img">
-      </a>
+    <header class="header-compacto border-bottom sticky-top bg-white">
+        <nav class="navbar navbar-expand-lg navbar-light w-100">
 
-      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+            <div class="container d-flex align-items-center justify-content-between">
 
-      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link px-15" href="quienes_somos.html">Quiénes somos</a></li>
-          <li class="nav-item"><a class="nav-link px-15" href="educacion.html">Educación</a></li>
-          <li class="nav-item"><a class="nav-link px-15" href="contacto.html">Contacto</a></li>
-        </ul>
-      </div>
+                <a class="navbar-brand p-0" href="../index.html">
+                    <img src="../img/ANAA.png" alt="ANAA" class="logo-img">
+                </a>
 
-      <div class="d-flex align-items-center acciones-header">
-        <a href="#" class="link-entrar">Entrar</a>
-        <button type="button" class="btn btn-cta">Hacerse socio</button>
-      </div>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-    </div>
-  </nav>
-</header>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link px-15" href="pages/quienes_somos.html">¿Quiénes somos?</a></li>
+                        <li class="nav-item"><a class="nav-link px-15" href="pages/comoAdoptar.html">¿Como adoptar?</a></li>
+                        <li class="nav-item"><a class="nav-link px-15" href="pages/contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="d-flex align-items-center acciones-header">
+                    <a href="pages/iniciarSesion.html" type="button" class="btn btn-outline-secondary">Entrar</a>
+                    <a href="pages/hacerseSocio.html" type="button" class="btn btn-cta">Hacerse socio</a>
+                </div>
+            </div>
+        </nav>
+    </header>
 
     <main>
-        <section class="py-5 text-center container">
-            <div class="row py-lg-5">
-                <div class="col-lg-6 col-md-8 mx-auto">
-                    <h1 class="fw-light mb-5">Encuentra a tu nuevo mejor amigo</h1> 
-                    <p class="lead text-body-secondary mb-5">Todos nuestros animales se entregan vacunados, desparasitados y con microchip.</p>
-                    <div class="d-flex justify-content-center gap-2">
-                        <a href="perros.html" class="btn btn-primary">Perros</a>
-                        <a href="gatos.html" class="btn btn-primary">Gatos</a>
-                        <a href="otros_animales.html" class="btn btn-primary">Otros</a>
+
+        <!--- Sección Hero -->
+
+        <section class="py-4 text-center container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    <h1 class="fw-bold text-success display-6 mb-3">Encuentra a tu nuevo mejor amigo</h1> 
+                    <p class="lead text-muted mb-4">Todos nuestros animales se entregan vacunados, desparasitados y con microchip.</p>
+                
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="perros.html" class="btn btn-lg btn-outline-success rounded-pill px-4 shadow-sm">🐶 Perros</a>
+                        <a href="gatos.html" class="btn btn-lg btn-outline-success rounded-pill px-4 shadow-sm">🐱 Gatos</a>
+                        <a href="otros_animales.html" class="btn btn-lg btn-outline-success rounded-pill px-4 shadow-sm">🐾 Otros</a>
                     </div>
+
                 </div>
             </div>
         </section>
 
-        <div class="album py-5 bg-body-tertiary mt-4">
+        <!--- Sección de tarjetas de animales -->
+
+        <div class="album py-5 bg-main-tertiary mt-4">
             <div class="container">
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
                 
                     <div class="col p-3">
-                        <div class="card shadow-sm h-100 border-0">
+                        <div class="card shadow-sm h-100">
                                 <img src="../img/perroMestizo.jpg" alt="Thor" style="width: 100%; height: 100%; object-fit: cover;" >
                             <div class="card-body">
                                 <h5 class="fw-bold">Thor </h5>
                                 <p class="card-text text-muted">Mestizo • 3 Años • Macho</p>
-                                <button type="button" class="btn btn-sm btn-outline-success w-100 mt-2">Ver ficha completa</button>
+                                <a href="fichaAnimal_Thor.html" class="btn btn-sm btn-outline-success w-100 mt-2">Ver ficha completa</a>
                             </div>
                         </div>
                     </div>
@@ -77,7 +85,7 @@
                             <div class="card-body">
                                 <h5 class="fw-bold">Mina </h5>
                                 <p class="card-text text-muted">Común Europeo • 1 Año • Hembra</p>
-                                <button type="button" class="btn btn-sm btn-outline-success w-100 mt-2">Ver ficha completa</button>
+                                <a href="fichaAnimal_Mina.html" class="btn btn-sm btn-outline-success w-100 mt-2">Ver ficha completa</a>
                             </div>
                         </div>
                     </div>
@@ -88,7 +96,7 @@
                             <div class="card-body">
                                 <h5 class="fw-bold">Lola </h5>
                                 <p class="card-text text-muted">Siamés • 2 Años • Hembra</p>
-                                <button type="button" class="btn btn-sm btn-outline-success w-100 mt-2">Ver ficha completa</button>
+                                <a href="fichaAnimal_Lola.html" class="btn btn-sm btn-outline-success w-100 mt-2">Ver ficha completa</a>
                             </div>
                         </div>
                     </div>
@@ -99,7 +107,7 @@
                             <div class="card-body">
                                 <h5 class="fw-bold">Copito </h5>
                                 <p class="card-text text-muted">Belier • 2 Años • Macho</p>
-                                <button type="button" class="btn btn-sm btn-outline-success w-100 mt-2">Ver ficha completa</button>
+                                <a href="fichaAnimal_Copito.html" class="btn btn-sm btn-outline-success w-100 mt-2">Ver ficha completa</a>
                             </div>
                         </div>
                     </div> 
@@ -110,7 +118,7 @@
                             <div class="card-body">
                                 <h5 class="fw-bold">Toby </h5>
                                 <p class="card-text text-muted">Beagle • 1 Año • Macho</p>
-                                <button type="button" class="btn btn-sm btn-outline-success w-100 mt-2">Ver ficha completa</button>
+                                <a href="fichaAnimal_Toby.html" class="btn btn-sm btn-outline-success w-100 mt-2">Ver ficha completa</a>
                             </div>
                         </div>
                     </div>
@@ -121,7 +129,7 @@
                             <div class="card-body">
                                 <h5 class="fw-bold">Galleta </h5>
                                 <p class="card-text text-muted">Abisinia • 6 Meses • Hembra</p>
-                                <button type="button" class="btn btn-sm btn-outline-success w-100 mt-2">Ver ficha completa</button>
+                                <a href="fichaAnimal_Galleta.html" class="btn btn-sm btn-outline-success w-100 mt-2">Ver ficha completa</a>
                             </div>
                         </div>
                     </div>
@@ -132,7 +140,7 @@
                             <div class="card-body">
                                 <h5 class="fw-bold">Rex </h5>
                                 <p class="card-text text-muted">Pastor Alemán • 5 Años • Macho</p>
-                                <button type="button" class="btn btn-sm btn-outline-success w-100 mt-2">Ver ficha completa</button>
+                                <a href="fichaAnimal_Rex.html" class="btn btn-sm btn-outline-success w-100 mt-2">Ver ficha completa</a>
                             </div>
                         </div>
                     </div>  
@@ -143,7 +151,7 @@
                             <div class="card-body">
                                 <h5 class="fw-bold">Olivia </h5>
                                 <p class="card-text text-muted">Tortuga de agua • 10 Años • Hembra</p>
-                                <button type="button" class="btn btn-sm btn-outline-success w-100 mt-2">Ver ficha completa</button>
+                                <a href="fichaAnimal_Olivia.html" class="btn btn-sm btn-outline-success w-100 mt-2">Ver ficha completa</a>
                             </div>
                         </div>
                     </div>
@@ -154,7 +162,7 @@
                             <div class="card-body">
                                 <h5 class="fw-bold">Blue </h5>
                                 <p class="card-text text-muted">Periquito común • 1 Año • Macho</p>
-                                <button type="button" class="btn btn-sm btn-outline-success w-100 mt-2">Ver ficha completa</button>
+                                <a href="fichaAnimal_Blue.html" class="btn btn-sm btn-outline-success w-100 mt-2">Ver ficha completa</a>
                             </div>
                         </div>
                     </div>
@@ -165,7 +173,7 @@
                             <div class="card-body">
                                 <h5 class="fw-bold">Bigotes </h5>
                                 <p class="card-text text-muted">Ruso • 4 Meses • Macho</p>
-                                <button type="button" class="btn btn-sm btn-outline-success w-100 mt-2">Ver ficha completa</button>
+                                <a href="fichaAnimal_Bigotes.html" class="btn btn-sm btn-outline-success w-100 mt-2">Ver ficha completa</a>
                             </div>
                         </div>
                     </div>
@@ -176,7 +184,7 @@
                             <div class="card-body">
                                 <h5 class="fw-bold">Nala </h5>
                                 <p class="card-text text-muted">Angora • 6 Meses • Hembra</p>
-                                <button type="button" class="btn btn-sm btn-outline-success w-100 mt-2">Ver ficha completa</button>
+                                <a href="fichaAnimal_Nala.html" class="btn btn-sm btn-outline-success w-100 mt-2">Ver ficha completa</a>
                             </div>
                         </div>
                     </div>
@@ -187,69 +195,69 @@
                             <div class="card-body">
                                 <h5 class="fw-bold">Púas </h5>
                                 <p class="card-text text-muted">Erizo Africano • 1 Año • Macho</p>
-                                <button type="button" class="btn btn-sm btn-outline-success w-100 mt-2">Ver ficha completa</button>
+                                <a href="fichaAnimal_Puas.html" class="btn btn-sm btn-outline-success w-100 mt-2">Ver ficha completa</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </main>
+    </body>
 
-<footer class="footer-oscuro-total py-4">
-    <div class="container">
-        <div class="d-flex flex-wrap justify-content-between align-items-center border-top pt-4">
+    <footer class="footer-oscuro-total py-4">
+        <div class="container">
+            <div class="d-flex flex-wrap justify-content-between align-items-center border-top pt-4">
             
-            <p class="col-md-4 mb-0 text-claro">© 2024 ANAA - Amigos de los Animales</p>
+                <p class="col-md-4 mb-0 text-claro">© 2024 ANAA - Amigos de los Animales</p>
 
-            <a href="index.html" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto text-decoration-none">
-                <img src="../img/ANAA.png" alt="ANAA" class="logo-footer-xl">
-            </a>
+                <a href="index.html" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto text-decoration-none">
+                    <img src="../img/ANAA.png" alt="ANAA" class="logo-footer-xl">
+                </a>
 
-            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex social-footer-final">
-                <li class="ms-3">
-                    <a href="#" aria-label="Facebook">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 16 16"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/></svg>
-                    </a>
-                </li>
-                <li class="ms-3">
-                    <a href="#" aria-label="TikTok">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 16 16"><path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/></svg>
-                    </a>
-                </li>
-                <li class="ms-3">
-                    <a href="#" aria-label="Instagram">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 16 16"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.999 0zm0 1.44c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.844.047 1.097.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.282.11-.705.24-1.485.276-.844.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm0 2.446a4.115 4.115 0 1 0 0 8.229 4.115 4.115 0 0 0 0-8.229zm0 6.789a2.674 2.674 0 1 1 0-5.348 2.674 2.674 0 0 1 0 5.348zM11.903 3.3a.969.969 0 1 0 0 1.939.969.969 0 0 0 0-1.939z"/></svg>
-                    </a>
-                </li>
-                <li class="ms-3">
-                    <a href="#" aria-label="X">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 16 16"><path d="M12.6 0h2.454l-5.36 6.142L16 16h-4.937l-3.867-5.07L2.777 16H.325l5.734-6.57L0 0h5.063l3.495 4.633L12.6 0zm-.86 14.547h1.359L4.163 1.205H2.703z"/></svg>
-                    </a>
-                </li>
-            </ul>
+                <ul class="nav col-md-4 justify-content-end list-unstyled d-flex social-footer-final">
+                    <li class="ms-3">
+                        <a href="#" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 16 16"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/></svg>
+                        </a>
+                    </li>
+                    <li class="ms-3">
+                        <a href="#" aria-label="TikTok">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 16 16"><path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/></svg>
+                        </a>
+                    </li>
+                    <li class="ms-3">
+                        <a href="#" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 16 16"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.999 0zm0 1.44c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.844.047 1.097.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.282.11-.705.24-1.485.276-.844.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm0 2.446a4.115 4.115 0 1 0 0 8.229 4.115 4.115 0 0 0 0-8.229zm0 6.789a2.674 2.674 0 1 1 0-5.348 2.674 2.674 0 0 1 0 5.348zM11.903 3.3a.969.969 0 1 0 0 1.939.969.969 0 0 0 0-1.939z"/></svg>
+                        </a>
+                    </li>
+                    <li class="ms-3">
+                        <a href="#" aria-label="X">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 16 16"><path d="M12.6 0h2.454l-5.36 6.142L16 16h-4.937l-3.867-5.07L2.777 16H.325l5.734-6.57L0 0h5.063l3.495 4.633L12.6 0zm-.86 14.547h1.359L4.163 1.205H2.703z"/></svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-<script>
-  let lastScrollTop = 0;
-  const header = document.querySelector('.header-compacto');
+    <script>
+        let lastScrollTop = 0;
+        const header = document.querySelector('.header-compacto');
 
-  window.addEventListener('scroll', function() {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-    // Detectamos si bajamos (ocultar) o subimos (mostrar)
-    if (scrollTop > lastScrollTop && scrollTop > 100) {
-      header.classList.add('header-hidden');
-    } else {
-      header.classList.remove('header-hidden');
-    }
-    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-  }, false);
-</script>
+            // Detectamos si bajamos (ocultar) o subimos (mostrar)
+        if (scrollTop > lastScrollTop && scrollTop > 100) {
+            header.classList.add('header-hidden');
+        } else {
+            header.classList.remove('header-hidden');
+        }
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        }, false);
+    </script>
 
 </body>
 </html>
