@@ -1,19 +1,144 @@
-<main class="container py-5">
-  <div class="row justify-content-center">
-    <div class="col-md-6">
-      <div class="card shadow-sm">
-        <div class="card-body p-4">
-          <h2 class="text-center mb-4">Hazte socio</h2>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro ANAA - Centrado</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* FONDO Y CENTRADO TOTAL */
+        body, html {
+            height: 100%;
+            margin: 0;
+            background-color: #212529; /* Fondo oscuro como en la imagen */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-          <form>
-            <input class="form-control mb-3" placeholder="Nombre completo" required>
-            <input class="form-control mb-3" type="email" placeholder="Email" required>
-            <input class="form-control mb-3" type="password" placeholder="Contraseña" required>
+        /* TARJETA BLANCA (MODAL) */
+        .anaa-card {
+            background: white;
+            width: 100%;
+            max-width: 420px;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            text-align: center;
+        }
 
-            <button class="btn btn-success w-100">Crear cuenta</button>
-          </form>
-        </div>
-      </div>
+        /* LOGO 'A' VERDE */
+        .anaa-logo {
+            background-color: #2D572C;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            font-weight: bold;
+            margin: 0 auto 20px auto;
+        }
+
+        .anaa-card h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        /* INPUTS ESTILO IMAGEN */
+        .input-group-custom {
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+
+        .input-anaa {
+            border: none !important;
+            border-bottom: 1px solid #dee2e6 !important;
+            padding: 15px !important;
+            border-radius: 0 !important;
+            font-size: 16px;
+        }
+
+        .input-anaa:last-child {
+            border-bottom: none !important;
+        }
+
+        .input-anaa:focus {
+            box-shadow: none !important;
+            background-color: #f8f9fa;
+        }
+
+        /* CHECKBOX */
+        .form-check {
+            text-align: left;
+            margin-bottom: 25px;
+            color: #444;
+            font-size: 14px;
+        }
+
+        .form-check-input:checked {
+            background-color: #7DB61C;
+            border-color: #7DB61C;
+        }
+
+        /* BOTÓN VERDE LIMA */
+        .btn-anaa {
+            background-color: #A3D133; /* Color verde lima exacto */
+            border: none;
+            color: white;
+            padding: 12px;
+            width: 100%;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+
+        .btn-anaa:hover {
+            background-color: #8bb32b;
+            color: white;
+        }
+
+        /* COPYRIGHT */
+        .footer-text {
+            margin-top: 30px;
+            font-size: 13px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="anaa-card">
+        <div class="anaa-logo">A</div>
+        
+        <h2>Por favor, inicia sesión</h2>
+
+        <form action="#" method="POST">
+            <div class="input-group-custom">
+                <input type="email" class="form-control input-anaa" placeholder="Dirección de correo electrónico" required>
+                <input type="password" class="form-control input-anaa" placeholder="Contraseña" required>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
+                <label class="form-check-label" for="flexCheckDefault">
+                    Acuérdate de mí
+                </label>
+            </div>
+
+            <button type="submit" class="btn btn-anaa">Iniciar sesión</button>
+        </form>
+
+        <p class="footer-text">© 2026 ANAA</p>
     </div>
-  </div>
-</main>
+
+</body>
+</html>
