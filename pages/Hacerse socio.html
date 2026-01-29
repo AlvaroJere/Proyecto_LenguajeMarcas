@@ -5,15 +5,33 @@
         <div class="card-body p-4">
           <h2 class="text-center mb-4">Hazte socio</h2>
 
-          <form>
-            <input class="form-control mb-3" placeholder="Nombre completo" required>
-            <input class="form-control mb-3" type="email" placeholder="Email" required>
-            <input class="form-control mb-3" type="password" placeholder="Contraseña" required>
+          <form action="#" method="post">
+            <div class="mb-3">
+              <label class="form-label">Nombre completo</label>
+              <input type="text" name="nombre" class="form-control" required>
+            </div>
 
-            <button class="btn btn-success w-100">Crear cuenta</button>
+            <div class="mb-3">
+              <label class="form-label">Email</label>
+              <input type="email" name="email" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Contraseña</label>
+              <input type="password" name="password" class="form-control" required>
+            </div>
+
+            <button type="submit" class="btn btn-success w-100">
+              Crear cuenta
+            </button>
+
+            <p class="text-center text-muted small mt-3">
+              Al registrarte aceptas nuestros términos y condiciones
+            </p>
           </form>
         </div>
       </div>
     </div>
   </div>
 </main>
+

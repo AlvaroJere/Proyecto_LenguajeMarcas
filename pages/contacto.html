@@ -2,19 +2,38 @@
   <div class="row justify-content-center">
     <div class="col-md-7 text-center">
       <h2 class="mb-3">Contacto</h2>
-      <p class="mb-4">
+      <p class="mb-4 text-muted">
         Escríbenos si deseas adoptar, colaborar o resolver cualquier duda.
       </p>
     </div>
 
     <div class="col-md-6">
-      <form>
-        <input class="form-control mb-3" placeholder="Nombre" required>
-        <input class="form-control mb-3" type="email" placeholder="Email" required>
-        <textarea class="form-control mb-3" rows="4" placeholder="Mensaje" required></textarea>
-        <button class="btn btn-success w-100">Enviar mensaje</button>
+      <form action="#" method="post">
+        <div class="mb-3">
+          <label class="form-label">Nombre</label>
+          <input type="text" name="nombre" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Email</label>
+          <input type="email" name="email" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Mensaje</label>
+          <textarea name="mensaje" class="form-control" rows="4" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-success w-100">
+          Enviar mensaje
+        </button>
+
+        <p class="text-center text-muted small mt-3">
+          Todos los campos son obligatorios
+        </p>
       </form>
     </div>
   </div>
 </main>
+
 

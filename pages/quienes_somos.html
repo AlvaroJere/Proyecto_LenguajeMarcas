@@ -1,17 +1,38 @@
 <main class="container py-5">
   <div class="row justify-content-center">
-    <div class="col-md-8">
-      <h2 class="text-center mb-4">Quiénes somos</h2>
-
-      <p>
-        ANAA es una asociación sin ánimo de lucro dedicada al rescate,
-        cuidado y adopción responsable de animales abandonados.
+    <div class="col-md-7 text-center">
+      <h2 class="mb-3">Contacto</h2>
+      <p class="mb-4 text-muted">
+        Escríbenos si deseas adoptar, colaborar o resolver cualquier duda.
       </p>
+    </div>
 
-      <p>
-        Trabajamos desde el respeto, la educación y el compromiso
-        para ofrecer segundas oportunidades y concienciar a la sociedad.
-      </p>
+    <div class="col-md-6">
+      <form action="#" method="post">
+        <div class="mb-3">
+          <label class="form-label">Nombre</label>
+          <input type="text" name="nombre" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Email</label>
+          <input type="email" name="email" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Mensaje</label>
+          <textarea name="mensaje" class="form-control" rows="4" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-success w-100">
+          Enviar mensaje
+        </button>
+
+        <p class="text-center text-muted small mt-3">
+          Todos los campos son obligatorios
+        </p>
+      </form>
     </div>
   </div>
 </main>
+
