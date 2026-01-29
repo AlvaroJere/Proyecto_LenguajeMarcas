@@ -10,53 +10,54 @@
     
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
 
-<header class="header-compacto border-bottom sticky-top bg-white">
-  <nav class="navbar navbar-expand-lg navbar-light w-100">
-    <div class="container d-flex align-items-center justify-content-between">
-      
-      <a class="navbar-brand p-0" href="index.html">
-        <img src="img/ANAA.png" alt="ANAA" class="logo-img">
-      </a>
+    <header class="header-compacto border-bottom sticky-top bg-white">
+        <nav class="navbar navbar-expand-lg navbar-light w-100">
 
-      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+            <div class="container d-flex align-items-center justify-content-between">
 
-      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link px-15" href="quienes_somos.html">Quiénes somos</a></li>
-          <li class="nav-item"><a class="nav-link px-15" href="educacion.html">Educación</a></li>
-          <li class="nav-item"><a class="nav-link px-15" href="contacto.html">Contacto</a></li>
-        </ul>
-      </div>
+                <a class="navbar-brand p-0" href="index.html">
+                    <img src="img/ANAA.png" alt="ANAA" class="logo-img">
+                </a>
 
-      <div class="d-flex align-items-center acciones-header">
-        <a href="#" class="link-entrar">Entrar</a>
-        <button type="button" class="btn btn-cta">Hacerse socio</button>
-      </div>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-    </div>
-  </nav>
-</header>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link px-15" href="pages/quienes_somos.html">Quiénes somos</a></li>
+                        <li class="nav-item"><a class="nav-link px-15" href="pages/educacion.html">Educación</a></li>
+                        <li class="nav-item"><a class="nav-link px-15" href="pages/contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="d-flex align-items-center acciones-header">
+                    <a href="pages/iniciarSesion.html" type="button" class="btn btn-outline-secondary">Entrar</a>
+                    <a href="pages/hacerseSocio.html" type="button" class="btn btn-cta">Hacerse socio</a>
+                </div>
+            </div>
+        </nav>
+    </header>
 
     <!-- Sección Hero -->
 
     <section class="hero">
         <div class="container">
             <div class="row align-items-center g-5">
-                <div class="col-12 col-lg-6 hero-text">
-                    <h1>Asociación Nacional Amigos de los Animales</h1>
-                    <p class="hero-subtitle">Protegiendo y dando hogar</p>
-                    <p class="hero-desc">Trabajamos por el bienestar animal, la tenencia responsable y el fin del abandono. Tu ayuda salva vidas.</p>
-                        <div class="d-flex gap-3">
+                <div class="col-12 col-lg-6 hero-text text-center text-lg-start">
+                    <h1 class="fw-bold">Asociación Nacional Amigos de los Animales</h1>
+                        <p class="hero-subtitle fw-bold text-primary">Protegiendo y dando hogar</p>
+                    <p class="hero-desc text-secundary text-center text-lg-start">Trabajamos por el bienestar animal, la tenencia responsable y el fin del abandono. Tu ayuda salva vidas.</p>
+                        <div class="d-flex gap-3 justify-content-center justify-content-lg-start mb-5 mb-lg-0">
                             <a href="pages/adoptar.html" class="btn btn-cta">Adoptar</a>
-                            <button class="btn btn-outline">Colaborar</button>
+                            <a href="pages/colaborar.html" class="btn btn-outline-secondary rounded-pill px-4">Colaborar</a>
                         </div>
                 </div>
-                <div class="col-12 col-lg-6">
-                    <div class="hero-image-container">
+                <div class="col-12 col-lg-6 d-flex justify-content-center">
+                    <div class="hero-image-container w-75 w-lg-100">
                         <img src="img/perro1.png" alt="Perro feliz" class="img-fluid rounded shadow-lg">
                     </div>
                 </div>
@@ -65,6 +66,7 @@
     </section>
 
     <!-- Sección de animales en adopción -->
+
     <section class="adoption-section py-5">
         <div class="container">
             <div class="section-header text-center mb-5">
@@ -95,7 +97,7 @@
 
             <div class="col-12 col-md-6 col p-3">
                 <article class="card h-100 shadow-sm">
-                    <img src="../img/hamster1.webp" class="card-img-top img-cover" alt="Bigotes" style="height: 200px; object-fit: cover;">
+                    <img src="img/hamster1.webp" class="card-img-top img-cover" alt="Bigotes" style="height: 200px; object-fit: cover;">
                     <div class="card-body d-flex flex-column text-center">
                         <h5 class="card-title">Bigotes </h5>
                         <p class="card-text text-muted small">Ruso • 4 Meses • Macho</p>
@@ -106,7 +108,7 @@
 
             <div class="col-12 col-md-6 col p-3">
                 <article class="card h-100 shadow-sm">
-                    <img src="../img/erizo1.jpg" class="card-img-top img-cover" alt="Púas" style="height: 200px; object-fit: cover;">
+                    <img src="img/erizo1.jpg" class="card-img-top img-cover" alt="Púas" style="height: 200px; object-fit: cover;">
                     <div class="card-body d-flex flex-column text-center">
                         <h5 class="card-title">Púas </h5>
                         <p class="card-text text-muted small">Erizo Africano • 1 Año • Macho</p>
@@ -118,62 +120,123 @@
         </div> 
     </section>
 
-    <section class="values-section">
-        <div class="container">
-            <h2 class="section-title">Educación y Tenencia Responsable</h2>
-            <div class="row g-5"> <div class="col-12 col-lg-7">
-                <article class="story-main h-100">
-                    <div style="height: 300px; overflow: hidden; border-radius: 8px; margin-bottom: 1.5rem;">
-                        <img src="img/perroYgaato.png" alt="Familia con perro" class="img-cover w-100 h-100">
-                    </div>
-                    <div class="story-content">
-                        <h3>¿Estás listo para adoptar?</h3>
-                        <p>La adopción es un compromiso de por vida. Antes de tomar la decisión, infórmate sobre las necesidades físicas y emocionales de tu futuro compañero.</p>
-                        <a href="#" class="link-more">Leer guía de adopción →</a>
-                    </div>
-                </article>
-            </div>
+    <!-- Sección de Educación y Tenencia Responsable -->
 
-            <div class="col-12 col-lg-5">
-                <div class="story-list d-flex flex-column gap-4">
-                    <article class="story-item d-flex align-items-center p-3 bg-white rounded shadow-sm">
-                        <img src="img/perro4.png" class="icon-img me-3" alt="Salud" style="width: 60px; height: 60px; object-fit: cover;">
-                        <div>
-                            <h4 class="mb-1">Beneficios de la esterilización</h4>
-                            <p class="small text-muted mb-0">Salud y control de población.</p>
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="mb-5 fw-bold text-center text-success">Educación y Tenencia Responsable</h2>
+        
+            <div class="row justify-content-center"> 
+                <div class="col-12 col-lg-10 mb-5">
+                    <article class="bg-white rounded shadow-sm border border-light overflow-hidden">
+                        <div class="ratio ratio-21x9"> 
+                            <img src="img/perroYgaato.png" alt="Familia con perro" class="img-fluid object-fit-cover">
+                        </div>
+        
+                        <div class="card-body p-4 text-center">
+                            <h3 class="fw-bold text-success mb-4">¿Estás listo para adoptar?</h3>
+                            <p class="text-secondary mx-auto">
+                                La adopción es un compromiso de por vida. Antes de tomar la decisión, infórmate sobre las necesidades físicas y emocionales de tu futuro compañero.
+                            </p>
                         </div>
                     </article>
-                    <article class="story-item d-flex align-items-center p-3 bg-white rounded shadow-sm">
-                        <img src="img/perro5.png" class="icon-img me-3" alt="Chip" style="width: 60px; height: 60px; object-fit: cover;">
-                        <div>
-                            <h4 class="mb-1">Identificación con microchip</h4>
-                            <p class="small text-muted mb-0">Seguridad obligatoria y necesaria.</p>
-                        </div>
-                    </article>
-                    <article class="story-item d-flex align-items-center p-3 bg-white rounded shadow-sm">
-                        <img src="img/perro6.png" class="icon-img me-3" alt="Nutricion" style="width: 60px; height: 60px; object-fit: cover;">
-                        <div>
-                            <h4 class="mb-1">Nutrición adecuada</h4>
-                            <p class="small text-muted mb-0">Consejos veterinarios básicos.</p>
-                        </div>
-                    </article>
+                </div>
+
+                <div class="col-12 col-lg-10">
+                    <div class="row g-3"> <div class="col-12 col-md-4">
+                        <article class="d-flex align-items-center p-3 bg-white rounded shadow-sm border border-light h-100">
+                            <img src="img/perro4.png" class="rounded-circle flex-shrink-0" alt="Salud" style="width: 50px; height: 50px; object-fit: cover;">
+                            <div class="ms-3 text-start">
+                                <h6 class="mb-1 fw-bold">Esterilización</h6>
+                                <p class="small text-muted mb-0">Salud y control.</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <article class="d-flex align-items-center p-3 bg-white rounded shadow-sm border border-light h-100">
+                            <img src="img/perro5.png" class="rounded-circle flex-shrink-0" alt="Chip" style="width: 50px; height: 50px; object-fit: cover;">
+                            <div class="ms-3 text-start">
+                                <h6 class="mb-1 fw-bold">Microchip</h6>
+                                <p class="small text-muted mb-0">Seguridad total.</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <article class="d-flex align-items-center p-3 bg-white rounded shadow-sm border border-light h-100">
+                            <img src="img/perro6.png" class="rounded-circle flex-shrink-0" alt="Nutricion" style="width: 50px; height: 50px; object-fit: cover;">
+                            <div class="ms-3 text-start">
+                                <h6 class="mb-1 fw-bold">Nutrición</h6>
+                                <p class="small text-muted mb-0">Consejos básicos.</p>
+                            </div>
+                        </article>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="testimonials">
+    <!-- Sección de Testimonios -->
+
+    <section class="py-5 bg-primary text-white">
         <div class="container">
-            <h2 class="section-title">Finales Felices</h2>
-            <div class="testimonial-card">
-                <img src="img/persona1.png" alt="Laura" class="avatar-img">
-                <div>
-                    <p class="quote">"Adoptar en ANAA fue un proceso transparente y lleno de apoyo. Nos ayudaron a encontrar al perro perfecto para nuestro estilo de vida."</p>
-                    <p class="author">— Laura y Marcos, adoptantes de Bimba</p>
+            <h2 class="mb-5 fw-bold text-center text-white">Finales Felices</h2>
+
+            <div id="carouselTestimonios" class="carousel slide" data-bs-ride="carousel">
+            
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselTestimonios" data-bs-slide-to="0" class="active bg-white"></button>
+                    <button type="button" data-bs-target="#carouselTestimonios" data-bs-slide-to="1" class="bg-white"></button>
+                    <button type="button" data-bs-target="#carouselTestimonios" data-bs-slide-to="2" class="bg-white"></button>
                 </div>
+
+                <div class="carousel-inner pb-5">
+                
+                    <div class="carousel-item active">
+                        <div class="d-flex flex-column align-items-center text-center px-5 h-100 justify-content-center">
+                            <img src="img/persona1.png" alt="Laura" class="rounded-circle mb-3 shadow" style="width: 100px; height: 100px; object-fit: cover; border: 3px solid #ffffff;">
+                            <div class="col-lg-8">
+                                <p class="fs-5 fst-italic mb-3">"Adoptar en ANAA fue un proceso transparente y lleno de apoyo. Nos ayudaron a encontrar al perro perfecto."</p>
+                                <p class="fw-bold">— Laura, adoptante de Bimba</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="d-flex flex-column align-items-center text-center px-5 h-100 justify-content-center">
+                            <img src="img/persona2.jpg" alt="Juan" class="rounded-circle mb-3 shadow" style="width: 100px; height: 100px; object-fit: cover; border: 3px solid #ffffff;">
+                            <div class="col-lg-8">
+                                <p class="fs-5 fst-italic mb-3">"Nunca pensé que un gato mayor pudiera adaptarse tan rápido. Gracias por el asesoramiento."</p>
+                                <p class="fw-bold">— Juan Manuel, adoptante de Oliver</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="d-flex flex-column align-items-center text-center px-5 h-100 justify-content-center">
+                            <img src="img/persona3.webp" alt="Elena" class="rounded-circle mb-3 shadow" style="width: 100px; height: 100px; object-fit: cover; border: 3px solid #ffffff;">
+                            <div class="col-lg-8">
+                                <p class="fs-5 fst-italic mb-3">"El seguimiento que hacen tras la adopción es increíble. Se nota el amor por los animales."</p>
+                                <p class="fw-bold">— Elena R., adoptante de Luna</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselTestimonios" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselTestimonios" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
             </div>
         </div>
     </section>
+
+    <!-- Footer -->
 
     <footer class="footer-oscuro-total py-4">
     <div class="container">

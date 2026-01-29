@@ -351,21 +351,6 @@ h1, h2, h3, h4 {
 }
 
 /* --- TESTIMONIOS --- */
-.testimonials { padding: 4rem 0; background: var(--color-blue); color: var(--white); text-align: center; }
-.testimonials .section-title { color: var(--white); }
-
-.testimonial-card {
-    max-width: 800px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-}
-
-.avatar { width: 80px; height: 80px; border-radius: 50%; border: 3px solid var(--white); }
-.quote { font-size: 1.2rem; font-style: italic; opacity: 0.9; }
-.author { font-weight: 700; margin-top: 0.5rem; }
 
 /* --- FOOTER --- */
 
