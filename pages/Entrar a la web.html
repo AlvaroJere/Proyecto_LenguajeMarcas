@@ -1,65 +1,154 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Entrar | ANAA</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso ANAA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* 1. CENTRADO TOTAL Y FONDO OSCURO */
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #212529; /* El color oscuro de tu imagen */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        /* 2. LA TARJETA BLANCA */
+        .anaa-card {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 420px;
+            padding: 45px 35px;
+            border-radius: 8px; /* Bordes suaves como en la imagen */
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+            text-align: center;
+        }
+
+        /* 3. EL LOGO DE LA "A" */
+        .anaa-logo-container {
+            background-color: #2D572C; /* Verde oscuro ANAA */
+            color: white;
+            width: 65px;
+            height: 65px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 38px;
+            font-weight: bold;
+            margin: 0 auto 25px auto;
+        }
+
+        .anaa-card h2 {
+            font-size: 28px;
+            color: #212529;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+
+        /* 4. CAMPOS DE TEXTO UNIDOS */
+        .input-wrapper {
+            border: 1px solid #dee2e6;
+            border-radius: 6px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .input-anaa {
+            border: none !important;
+            padding: 16px !important;
+            font-size: 16px !important;
+            border-radius: 0 !important;
+            color: #495057;
+        }
+
+        .input-anaa::placeholder {
+            color: #adb5bd;
+        }
+
+        /* Línea divisoria entre email y contraseña */
+        .border-divider {
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        /* 5. CHECKBOX "ACUÉRDATE DE MÍ" */
+        .form-check {
+            text-align: left;
+            margin-bottom: 25px;
+            font-size: 16px;
+            color: #212529;
+            display: flex;
+            align-items: center;
+        }
+
+        .form-check-input {
+            width: 1.2em;
+            height: 1.2em;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .form-check-input:checked {
+            background-color: #A3D133;
+            border-color: #A3D133;
+        }
+
+        /* 6. BOTÓN INICIAR SESIÓN (VERDE LIMA) */
+        .btn-anaa-login {
+            background-color: #A3D133 !important; /* El verde lima de la imagen */
+            border: none !important;
+            color: white !important;
+            width: 100%;
+            padding: 12px;
+            font-size: 18px;
+            border-radius: 8px;
+            font-weight: 400;
+            transition: opacity 0.2s;
+        }
+
+        .btn-anaa-login:hover {
+            opacity: 0.9;
+        }
+
+        /* 7. FOOTER */
+        .anaa-footer {
+            margin-top: 35px;
+            font-size: 14px;
+            color: #6c757d;
+        }
+    </style>
 </head>
 <body>
 
-<!-- HEADER -->
-<header class="sticky-top">
-  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="../index.html">ANAA</a>
-    </div>
-  </nav>
-</header>
+    <div class="anaa-card">
+        <img src="../img/ANAA.png" alt="ANAA" class="logo-img" 
+    
 
-<!-- CONTENIDO -->
-<main class="container py-5">
-  <div class="row justify-content-center">
-    <div class="col-md-5">
-      <div class="card shadow-sm">
-        <div class="card-body p-4">
-          <h2 class="text-center mb-4">Iniciar sesión</h2>
-
-          <form action="#" method="post">
-            <div class="mb-3">
-              <label class="form-label">Email</label>
-              <input type="email" name="email" class="form-control" required>
+        <form action="#">
+            <div class="input-wrapper">
+                <input type="email" class="form-control input-anaa border-divider" placeholder="Dirección de correo electrónico" required>
+                <input type="password" class="form-control input-anaa" placeholder="Contraseña" required>
             </div>
 
-            <div class="mb-3">
-              <label class="form-label">Contraseña</label>
-              <input type="password" name="password" class="form-control" required>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="rememberMe" checked>
+                <label class="form-check-label" for="rememberMe">
+                    Acuérdate de mí
+                </label>
             </div>
 
-            <button type="submit" class="btn btn-success w-100">
-              Entrar
-            </button>
-          </form>
+            <button type="submit" class="btn btn-anaa-login">Iniciar sesión</button>
+        </form>
 
-          <p class="text-center mt-3 small">
-            ¿No tienes cuenta?
-            <a href="registro.html">Hazte socio</a>
-          </p>
+        <div class="anaa-footer">
+            © 2026 ANAA
         </div>
-      </div>
     </div>
-  </div>
-</main>
 
-<!-- FOOTER -->
-<footer class="bg-dark text-light mt-5">
-  <div class="container py-4 text-center">
-    <small>© 2024 ANAA – Amigos de los Animales</small>
-  </div>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
 
