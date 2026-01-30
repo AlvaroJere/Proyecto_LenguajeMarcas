@@ -1,639 +1,86 @@
-/* --- VARIABLES DE MARCA ANAA --- */
+/* --- CONFIGURACIÓN Y VARIABLES --- */
 :root {
-    
-    --color-green: #2E7D32;  /* Verde protección/naturaleza */
-    --color-blue: #1565C0;   /* Azul confianza/transparencia */
-    --color-beige: #F5F5F0;  /* Beige/Blanco roto (limpieza/calma) */
-    --color-orange: #FF8A65; /* Naranja suave (Llamadas a la acción) */
-    
-    --text-main: #333333;
-    --text-light: #666666;
-    --white: #ffffff;
-    
-    /* Tipografías */
+    --green: #2E7D32;
+    --blue: #1565C0;
+    --beige: #F5F5F0;
+    --orange: #FF8A65;
     --font-heading: 'Montserrat', sans-serif;
     --font-body: 'Open Sans', sans-serif;
-    
-    --container-width: 1200px;
-    --radius: 8px; /* Bordes ligeramente redondeados, serios pero amables */
-}
-.container
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-main{
-    padding-top: 90px; /* Espacio para el header fijo */
 }
 
 body {
     font-family: var(--font-body);
-    color: var(--text-main);
-    line-height: 1.6;
-    background-color: var(--white);
-    -webkit-font-smoothing: antialiased; /* Mejora la legibilidad de las fuentes */
-    -moz-osx-font-smoothing: grayscale; /* Mejora la legibilidad de las fuentes */
+    color: #333;
+    padding-top: 90px !important; /* Espacio para el header fijo */
+    -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4 {
-    font-family: var(--font-heading);
-    font-weight: 700;
-    color: var(--color-green); /* Títulos en verde corporativo */
-}
+h1, h2, h3, h4 { font-family: var(--font-heading); color: var(--green); }
 
-/* --- UTILIDADES --- */
-
-.container {
-    max-width: 1200px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-}
-.container-custom {
-    max-width: var(--container-width);
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-
-.btn {
-    padding: 10px 25px !important;
-    border-radius: 50px !important; /* Botones más cuadrados para transmitir profesionalidad */
-    border: none;
-    font-weight: 600;
-    font-family: var(--font-heading);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 0.95rem;
-    letter-spacing: 0.5px;
-}
-
-/* Botón principal (Call to Action) - Naranja suave */
-.btn-cta {
-    background-color: var(--color-orange);
-    color: var(--white);
-}
-.btn-cta:hover { background-color: #F4511E; }
-
-/* Botón secundario - Azul confianza */
-.btn-primary {
-    background-color: var(--color-blue);
-    color: var(--white);
-}
-
-/* Botón secundario outline */
-.btn-secondary {
-    background-color: transparent;
-    border: 2px solid var(--color-green);
-    color: var(--color-green);
-}
-
-.btn-outline {
-    background-color: transparent;
-    border: 2px solid var(--color-blue);
-    color: var(--color-blue);
-}
-
-.section-title {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
-/* Placeholders */
-.placeholder-img {
-    background-color: var(--color-beige);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #aaa;
-    border-radius: var(--radius);
-    object-fit: cover;
-    position: relative;
-    overflow: hidden;
-}
-
-/* --- HEADER --- */
+/* --- COMPONENTES --- */
 .header-compacto {
-    /* Tu diseño original */
-    height: 90px;
-    display: flex;
-    align-items: center;
-    background-color: var(--white); /* Aseguramos que tenga fondo */
-    border-bottom: 1px solid #eee;
-
-    /* Nuevas propiedades para el efecto de ocultar */
-    position: fixed;   /* Cambiamos a fixed para que la animación funcione siempre */
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1100;
-    transition: transform 0.4s ease-in-out; /* Velocidad de la animación */
+    position: fixed; top: 0; width: 100%; z-index: 1100;
+    transition: transform 0.4s ease-in-out;
 }
 
-/* Esta es la clase que el JavaScript activará */
-.header-hidden {
-    transform: translateY(-100%); 
-}
+.header-hidden { transform: translateY(-100%); }
 
-/* El resto de tu código se mantiene igual */
-.acciones-header {
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
-    align-items: center;
-    gap: 20px;
-}
+.logo-img { height: 50px; }
 
-/* Ajuste para que el menú desplegable de móvil se vea bien */
-@media (max-width: 991px) {
-    .navbar-collapse {
-        position: absolute;
-        top: 60px; /* Justo debajo del header */
-        left: 0;
-        width: 100%;
-        background: white;
-        padding: 20px;
-        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
-        z-index: 1000;
-    }
-    .nav-item {
-        border-bottom: 1px solid #f0f0f0;
-        padding: 10px 0;
-    }
-
-}
-
-.px-15 {
-    padding-left: 15px !important;
-    padding-right: 15px !important;
-}
-
-/* Solo para tablets y móviles (debajo de 992px) */
-@media (max-width: 991.98px) {
-    .navbar .container {
-        position: relative; /* Necesario para el centrado */
-    }
-
-    .acciones-header {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%); /* Centra los botones exactamente al medio */
-        margin: 0 !important;
-    }
-
-    /* Ajuste para que el logo y el menú no pisen los botones si el móvil es muy pequeño */
-    .logo-img {
-        max-width: 80px; 
-    }
-}
-
-/* --- HERO SECTION --- */
-.hero {
-    padding: 5rem 0;
-    background-color: var(--color-beige); /* Fondo beige calmado */
-    margin-top: 70px; /* Espacio para el header fijo */
-}
-
-.hero-text h1 {
-    font-size: 3rem;
-    line-height: 1.2;
-    margin-bottom: 0.5rem;
-    color: var(--color-green);
-}
-
-.hero-subtitle {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
+/* Botón CTA y adaptaciones de marca */
+.btn-cta {
+    background: var(--orange);
+    color: #fff !important;
+    border-radius: 50px;
+    padding: 10px 25px;
     font-weight: 600;
-    color: var(--color-blue);
-    margin-bottom: 1.5rem;
+}
+.btn-cta:hover { background: #F4511E; }
+
+.btn-success { background: var(--green); border-color: var(--green); }
+
+/* --- SECCIONES (HERO & CARDS) --- */
+.hero { padding: 8rem 0 5rem; background: var(--beige); }
+.hero-subtitle { color: var(--blue); font-size: 1.5rem; }
+
+.hero-image-container img {
+    width: 450px !important; height: 450px !important; /* Formato cuadrado */
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 }
 
-.hero-desc {
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
-    max-width: 500px;
-    color: var(--text-light);
-}
-
-.hero-image-container {
-    height: 400px;
-    width: 100%;
-}
-
-
-/* --- ADOPTION SECTION --- */
-.adoption-section { padding: 4rem 0; }
-
-.filters {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    list-style: none;
-    margin-bottom: 2rem;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 1rem;
-}
-
-.filters li {
-    cursor: pointer;
-    font-weight: 600;
-    color: var(--text-light);
-}
-.filters li.active, .filters li:hover { color: var(--color-blue); }
-
-.card {
-    background: var(--white);
-    border: none !important;
-    border-radius: var(--radius);
-    overflow: hidden;
-    transition: transform all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-}
-.card:hover { transform: translateY(-8px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
-
-.card-img { height: 250px; border-radius: 0; }
-
-.card-content { padding: 1.5rem; text-align: center; }
-
-.card-title {
-    font-size: 1.2rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    color: var(--text-main);
-}
-
-.tag {
-    font-size: 0.7rem;
-    background: var(--color-beige);
-    padding: 2px 6px;
-    border-radius: 4px;
-    text-transform: uppercase;
-    color: var(--text-light);
-    vertical-align: middle;
-}
-
-.card-info {
-    font-size: 0.9rem;
-    color: var(--text-light);
-    margin-bottom: 1rem;
-}
-
-.btn-card {
-    width: 100%;
-    padding: 0.6rem;
-    background: transparent;
-    border: 1px solid var(--color-green);
-    color: var(--color-green);
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: all 0.2s;
-}
-.btn-card:hover { background: var(--color-green); color: var(--white); }
-
-/* --- VALUES / EDUCACION --- */
-.values-section {
-    padding: 4rem 0;
-    background-color: var(--color-beige);
-}
-
-.story-main { 
-    background: var(--white); 
-    padding: 2rem; 
-    border-radius: var(--radius); 
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-}
-
-.story-main .placeholder-img { 
-    height: 250px; 
-    margin-bottom: 1.5rem; 
-}
-
-.story-main h3 {
-    margin-bottom: 1rem; 
-    color: var(--color-blue); 
-}
-
-.link-more {
-    display: inline-block;
-    margin-top: 1rem;
-    color: var(--color-orange);
-    text-decoration: none;
-    font-weight: 700;
-}
-
-.story-list {
-    display: flex; 
-    flex-direction: 
-    column; gap: 1.5rem; 
-}
-
-.story-item { 
-    background: var(--white); 
-    border-radius: var(--radius); 
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-}
-
-.story-item:hover { 
-    transform: translateX(10px); 
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.story-item h4 { 
-    font-size: 1rem; 
-    color: var(--text-main); 
-}
-
-.small-text { 
-    font-size: 0.85rem; 
-    color: var(--text-light); 
-}
+.card { border: none !important; transition: transform 0.3s ease; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+.card:hover { transform: translateY(-8px); }
 
 /* --- FOOTER --- */
+.footer-oscuro-total { background: #1a1a1a; color: #fff; }
 
-footer {
-    background-color: #1a1a1a; /* Fondo oscuro sólido */
-    border-top: none !important; /* Quitamos el borde para que el bloque de color sea limpio */
-    margin-top: 60px !important;
-    padding-top: 40px !important; /* Más aire arriba en px */
-    padding-bottom: 40px !important; /* Más aire abajo en px */
-    width: 100%; /* Asegura que cubra todo el ancho */
-}
+.logo-footer-xl { height: 45px; filter: brightness(0) invert(1); }
 
-/* Forzar que el contenedor interno mantenga el ancho de tu web */
-footer .container-footer {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+.text-claro { color: rgba(255,255,255,0.8) !important; font-size: 14px; }
 
-/* Color de los textos (Copyright y otros) */
-footer .text-body-secondary {
-    color: #e0e0e0 !important; /* Gris muy claro/blanco roto */
-    font-size: 14px;
-    font-family: var(--font-body);
-}
-
-/* Estilo para los iconos de Redes Sociales */
-.social-footer span {
-    filter: brightness(0) invert(1); /* Truco Pro: Convierte emojis/iconos oscuros en blancos */
-    font-size: 22px;
-    opacity: 0.8;
-    transition: opacity 0.3s ease;
-}
-
-.social-footer a:hover span {
-    opacity: 1;
-    filter: none; /* Vuelve a su color original al pasar el ratón si lo prefieres */
-}
-
-
-
-/* --- LOGO DEL FOOTER --- */
-
-.logo-footer-xl {
-    height: 60px; /* Tamaño grande y visible */
-    width: auto;
-    display: block; /* Eliminamos filtros de gris para que se vea a todo color */
-    image-rendering: -webkit-optimize-contrast; /* Evita que se vea borroso */
-    transition: transform 0.3s ease;
-}
-
-.logo-footer-xl:hover {
-    transform: scale(1.1); /* Crece un poco al pasar el ratón */
-}
-
-/* Alineación del texto de copyright con el logo grande */
-footer .text-body-secondary {
-    margin-left: 10px;
-    font-size: 15px;
-    color: #ffffff !important; /* Blanco puro para legibilidad */
-    opacity: 0.8;
-}
-
-@media (max-width: 768px) {
-    .logo-footer-xl {
-        height: 40px; /* Un poco más pequeño en móviles para que no rompa el diseño */
-    }
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .hero-grid, .stories-grid, .footer-grid { grid-template-columns: 1fr; }
-    .nav-wrapper { flex-direction: column; gap: 1rem; }
-    nav ul { flex-wrap: wrap; justify-content: center; gap: 1rem; }
-}
-
-/* --- ESTILO BLANCO PARA LOGO Y TEXTO DEL FOOTER --- */
-
-.logo-footer-xl {
-    height: 65px;
-    width: auto;
-
-    /* Este comando convierte el logo a blanco puro */
-    filter: brightness(0) invert(1); 
-    transition: transform 0.3s ease;
-}
-
-.logo-footer-xl:hover {
-    transform: scale(1.08) brightness(1.2); /* Brilla un poco más al pasar el ratón */
-}
-
-/* Forzar texto de copyright a blanco */
-.text-claro {
-    color: #ffffff !important; /* Blanco puro */
-    font-size: 14px;
-    opacity: 0.9; /* Un poco de transparencia para que no sea agresivo */
-}
-
-/* Borde superior sutil */
-.footer-oscuro-total .border-top {
-    border-top: 1px solid #444444 !important;
-}
-
-/* --- ESTILOS PARA IMÁGENES REALES --- */
-img {
-    display: block; /* Elimina espacio inferior */
-    max-width: 100%; /* Escala responsivamente */
-    height: auto; /* Mantiene la proporción */
-}
-
-/* Esta clase es mágica: hace que la foto rellene el cuadro sin deformarse */
-.img-cover {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    border-radius: var(--radius);
-}
-
-/* Ajuste específico para las tarjetas de animales */
-.card-header-img {
-    width: 100%;
-    height: 250px; /* Misma altura que teníamos antes */
-    object-fit: cover;
-    border-radius: var(--radius) var(--radius) 0 0; /* Solo redondeamos arriba */
-}
-
-/* Ajuste para el Hero */
-.hero-image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: var(--radius);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1); /* Sombra suave para dar profundidad */
-}
-
-/* Ajuste para iconos y avatares */
-.icon-img { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; }
-.avatar-img { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid #fff; }
-
-/* --- CONFIGURACIÓN BASE (Desktop) --- */
-.header-compacto {
-    height: 70px;
-    display: flex;
-    align-items: center;
-}
-
-.logo-img { height: 60px; width: auto; }
-
-/* --- TABLET (Menos de 992px) --- */
+/* --- RESPONSIVE OPTIMIZADO --- */
 @media (max-width: 991px) {
-    .header-compacto {
-        height: 65px;
-    }
-    /* Reducimos un poco el espacio para que quepa todo */
-    .acciones-header {
-        gap: 10px;
-    }
-    .link-entrar {
-        font-size: 13px;
+    body { padding-top: 65px !important; }
+    .navbar .container { justify-content: space-between !important; }
+    .navbar-toggler { order: 1; border: 0 !important; }
+    .navbar-brand { order: 2; margin: 0 auto !important; }
+    .acciones-header { order: 3; gap: 8px; }
+    .navbar-collapse {
+        position: absolute; top: 60px; left: 0; width: 100%;
+        background: #fff; padding: 20px; box-shadow: 0 10px 15px rgba(0,0,0,0.1);
     }
 }
 
-/* --- MÓVIL (Menos de 576px) --- */
+@media (max-width: 768px) {
+    .footer-oscuro-total .container > div { flex-direction: column !important; text-align: center; gap: 1.5rem; }
+    .footer-oscuro-total .col-md-4, .social-footer-final { justify-content: center !important; width: 100% !important; }
+}
+
 @media (max-width: 575px) {
-    .header-compacto {
-        height: 60px;
-        padding: 0 10px; /* Ajustamos márgenes laterales */
-    }
-    
-    .logo-img { height: 25px; } /* Logo más pequeño en móvil */
-
-    .link-entrar {
-        font-size: 12px;
-    }
-
-    .header-compacto .btn-cta {
-        padding: 6px 12px; /* Botón más compacto */
-        font-size: 11px;
-        min-width: auto; /* Quitamos el ancho mínimo */
-    }
-    
-    .acciones-header {
-        gap: 8px;
-    }
-}
-
-/* Media query para móviles */
-@media (max-width: 768px) {
-    footer .container-footer {
-        flex-direction: column;
-        gap: 20px;
-    }
-}
-
-/* Ajuste para que en móvil los elementos se centren */
-@media (max-width: 768px) {
-    .footer-oscuro-total .container > div {
-        flex-direction: column; /* Solo forzamos el cambio de dirección al contenedor principal */
-        text-align: center;
-        gap: 20px;
-    }
-    
-    /* Centramos las redes sociales eliminando el empuje a la derecha */
-    .social-footer-final {
-        justify-content: center !important;
-        padding: 0;
-    }
-}
-
-    /*BOTONES BOOTSTRAP ADAPTADOS A ANAA*/
-    .btn-success {
-  background-color: var(--anaa-green);
-  border-color: var(--anaa-green);
-  font-weight: 600;
-}
-
-.btn-success:hover,
-.btn-success:focus {
-  background-color: var(--anaa-green-dark);
-  border-color: var(--anaa-green-dark);
-}
-.btn-success:active {
-  background-color: var(--anaa-green-darker);
-  border-color: var(--anaa-green-darker);
-}  
-
-/*FORMULARIOS (LOGIN, REGISTRO, CONTACTO)*/
-.form-control {
-  border-radius: 6px;
-  font-family: 'Open Sans', sans-serif;
-}
-
-.form-control:focus {
-  border-color: var(--anaa-green);
-  box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.25);
-}
-.btn-primary {
-  background-color: var(--anaa-green);
-  border-color: var(--anaa-green);
-  font-weight: 600;
-}   
-
-/*HEADER / NAVBAR*/
-.navbar {
-  font-family: 'Montserrat', sans-serif;
-}
-
-.navbar .nav-link {
-  color: #333;
-  font-weight: 500;
-}
-
-.navbar .nav-link:hover {
-  color: var(--anaa-green);
-}
-.navbar .navbar-brand {
-  font-weight: 700;
-  color: var(--anaa-green);
-}   
-
-/*CARDS (LOGIN / REGISTRO)*/
-.card {
-  border-radius: 12px;
-}
-
-.card h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-}
-.card-body {
-  font-family: 'Open Sans', sans-serif;
-}   
-
-/*FOOTER*/
-footer {
-  font-family: 'Open Sans', sans-serif;
-}
-
-footer.bg-dark {
-  background-color: var(--anaa-gray-dark) !important;
-}
-footer .text-white {
-  color: #f8f9fa !important;
+    .logo-img { height: 35px; }
+    .hero { padding-top: 6rem; }
+    .hero-image-container img { width: 280px !important; height: 280px !important; }
+    .footer-oscuro-total { padding: 2rem 0 !important; }
 }
