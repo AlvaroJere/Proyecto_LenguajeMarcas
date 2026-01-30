@@ -12,27 +12,30 @@
 </head>
 
 <body>
+<body class="bg-light bg-gradient min-vh-100">
 
     <!-- CONTENIDO CENTRADO -->
     <div class="d-flex justify-content-center align-items-center" style="height: 85vh;">
-        <div class="anaa-card">
+        <div class="anaa-card shadow-lg rounded-4 p-5">
 
-            <div class="anaa-logo"></div>
+
+            <div class="anaa-logo shadow-sm mb-4"></div>
             <h2 class="mb-4">Crea tu cuenta</h2>
 
             <form action="#" method="POST">
-                <div class="input-group-custom">
-                    <input type="text" name="nombre" class="form-control input-anaa" placeholder="Nombre completo" required>
-                    <input type="email" name="email" class="form-control input-anaa" placeholder="Dirección de correo electrónico" required>
-                    <input type="password" name="password" class="form-control input-anaa" placeholder="Contraseña" required>
+            <div class="input-group-custom mb-4">
+                <input type="text" name="nombre" class="form-control input-anaa py-3 mb-3" placeholder="Nombre completo" required>
+                <input type="email" name="email" class="form-control input-anaa py-3 mb-3" placeholder="Dirección de correo electrónico" required>
+                <input type="password" name="password" class="form-control input-anaa py-3" placeholder="Contraseña" required>
                 </div>
 
-                <button type="submit" class="btn-anaa">Registrarse</button>
+
+                <button type="submit" class="btn-anaa mt-3">Registrarse</button>
                 <p class="text-muted small mt-3">Al registrarte aceptas nuestros términos y condiciones</p>
             </form>
 
             <!-- BOTÓN VOLVER -->
-            <a href="../index.html" class="btn-anaa-dark mt-3 d-block text-center">
+            <a href="index.html" class="btn-anaa-dark mt-4 d-block text-center">
                 Volver a la página principal
             </a>
 
