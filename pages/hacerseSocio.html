@@ -1,0 +1,136 @@
+<style>
+  /* Centrado total en pantalla */
+  .anaa-modal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgba(0,0,0,0.5); /* Fondo oscuro semitransparente */
+    font-family: 'Segoe UI', Roboto, sans-serif;
+  }
+
+  .modal-content-anaa {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: none;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+  }
+
+  /* Cabecera Verde Oscura */
+  .modal-header-anaa {
+    background-color: #2D572C !important;
+    color: white !important;
+    padding: 2.5rem 2rem !important;
+    position: relative;
+    border: none !important;
+  }
+
+  .modal-header-anaa h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .modal-header-anaa p {
+    font-size: 0.95rem;
+    margin-top: 10px;
+    margin-bottom: 0;
+    opacity: 0.9;
+    line-height: 1.4;
+  }
+
+  /* Botón X de cerrar */
+  .btn-close-white {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    line-height: 1;
+  }
+
+  /* Cuerpo del Formulario */
+  .modal-body-anaa {
+    padding: 2.5rem 2rem !important;
+    background: white;
+  }
+
+  .label-custom {
+    color: #555;
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+    display: block;
+    font-weight: 500;
+  }
+
+  .input-custom {
+    border: 2px solid #7DB61C !important; /* Borde verde lima */
+    border-radius: 8px !important;
+    padding: 12px !important;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    outline: none;
+  }
+
+  /* Botón "Crear cuenta" */
+  .btn-anaa-submit {
+    background-color: #7DB61C !important;
+    border: none !important;
+    color: white !important;
+    font-size: 1.2rem !important;
+    font-weight: bold !important;
+    padding: 14px !important;
+    border-radius: 8px !important;
+    width: 100%;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .btn-anaa-submit:hover {
+    background-color: #6a9a17 !important;
+  }
+
+  .footer-text {
+    color: #888;
+    text-align: center;
+    font-size: 0.8rem;
+    margin-top: 15px;
+  }
+</style>
+
+
+  <div class="modal-content-anaa">
+    
+    <div class="modal-header-anaa">
+      <button type="button" class="btn-close-white">&times;</button>
+      <h2></h2>
+      <p>Regístrate gratis y colabora con la protección y adopción de animales.</p>
+    </div>
+
+    <div class="modal-body-anaa">
+      <form action="#" method="POST">
+        
+        <label class="label-custom">Correo electrónico</label>
+        <input type="email" class="input-custom" placeholder="nombre@ejemplo.com" required>
+
+        <label class="label-custom">Contraseña</label>
+        <input type="password" class="input-custom" placeholder="Tu contraseña" required>
+
+        <button type="submit" class="btn-anaa-submit">
+          Crear cuenta
+        </button>
+
+        <p class="footer-text">
+          Al registrarte aceptas nuestros términos y condiciones.
+        </p>
+      </form>
+    </div>
+
+
+

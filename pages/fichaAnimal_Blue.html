@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ANAA - Asociación Nacional Amigos de los Animales</title>
+    <title>Ficha de Blue - Asociación Nacional Amigos de los Animales</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -42,69 +42,31 @@
         </nav>
     </header>
 
-    <main>
-
-        <!--- Sección Hero -->
-        <section class="py-4 text-center container">
-            <div class="row">
-                <div class="col-lg-8 col-md-10 mx-auto">
-                    <h1 class="fw-bold text-success display-6 mb-3">Encuentra a tu nuevo mejor amigo</h1> 
-                    <p class="lead text-muted mb-4">Todos nuestros animales se entregan vacunados, desparasitados y con microchip.</p>
-                
-                    <div class="d-flex justify-content-center gap-3">
-                        <a href="perros.html" class="btn btn-lg btn-outline-success rounded-pill px-4 shadow-sm">🐶 Perros</a>
-                        <a href="adoptar.html" class="btn btn-lg btn-outline-success rounded-pill px-4 shadow-sm">⭕ Todos</a>
-                        <a href="otros_animales.html" class="btn btn-lg btn-outline-success rounded-pill px-4 shadow-sm">🐾 Otros</a>
-                    </div>
-                    
-                </div>
+    <main class="position-relative overflow-hidden min-vh-100 d-flex align-items-center bg-dark">
+        <img src="../img/ave1.jpg" class="position-absolute w-100 h-100 object-fit-cover opacity-25 start-0 top-0" alt="Fondo Blue">
+        <div class="container position-relative z-1 px-4 py-5 text-center text-white">
+            <img src="../img/ave1.jpg" class="d-block mx-auto mb-4 rounded-circle border border-4 border-white shadow-lg" alt="Blue" width="180" height="180" style="object-fit: cover;">
+            <div class="d-inline-block bg-white bg-opacity-50 px-5 py-2 rounded-pill shadow-lg mb-5">
+                <h1 class="display-4 fw-bold text-success mb-0 text-uppercase" style="letter-spacing: 2px;">Blue</h1>
             </div>
-        </section>
-
-        <!--- Sección de tarjetas de animales -->
-        <div class="album py-5 bg-body-tertiary">
-            <div class="container">
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
-
-                    <div class="col p-3">
-                        <div class="card shadow-sm h-100">
-                            <img src="../img/gato1.png" alt="Mina" style="width: 100%; height: 100%; object-fit: cover;" >
-                            <div class="card-body">
-                                <h5 class="fw-bold">Mina </h5>
-                                <p class="card-text text-muted">Común Europeo • 1 Año • Hembra</p>
-                                <a href="fichaAnimal_Mina.html" type="button" class="btn btn-sm btn-outline-success w-100 mt-2">Ver ficha completa</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col p-3">
-                        <div class="card shadow-sm h-100">
-                            <img src="../img/gatoSiamés.jpg" alt="Lola" style="width: 100%; height: 100%; object-fit: cover;" >
-                            <div class="card-body">
-                                <h5 class="fw-bold">Lola </h5>
-                                <p class="card-text text-muted">Siamés • 2 Años • Hembra</p>
-                                <a href="fichaAnimal_Lola.html" type="button" class="btn btn-sm btn-outline-success w-100 mt-2">Ver ficha completa</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col p-3">
-                        <div class="card shadow-sm h-100 border-0">
-                            <img src="../img/gatoAngora.jpg" alt="Nala" style="width: 100%; height: 100%; object-fit: cover;" >
-                            <div class="card-body">
-                                <h5 class="fw-bold">Nala </h5>
-                                <p class="card-text text-muted">Angora • 6 Meses • Hembra</p>
-                                <a href="fichaAnimal_Nala.html" type="button" class="btn btn-sm btn-outline-success w-100 mt-2">Ver ficha completa</a>
-                            </div>
-                        </div>
-                    </div>
-                    
+            <div class="col-lg-6 mx-auto">
+                <div class="bg-dark bg-opacity-50 p-4 rounded-5 mb-4 shadow-sm">
+                    <p class="lead">Blue es un periquito de colores vibrantes y canto alegre. Es muy sociable y le encanta interactuar con sus cuidadores. ¡Llenará tu casa de música!</p>
+                </div>
+                <div class="d-flex justify-content-center gap-2 mb-5">
+                    <span class="badge rounded-pill bg-success px-3 py-2 fs-6">Periquito</span>
+                    <span class="badge rounded-pill bg-secondary text-white px-3 py-2 fs-6">1 Año</span>
+                    <span class="badge rounded-pill bg-info text-dark px-3 py-2 fs-6">Macho</span>
+                </div>
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mt-4">
+                    <a href="contacto.html" class="btn btn-primary btn-lg px-4 rounded-pill shadow">Adoptar a Blue</a>
+                    <a href="adoptar.html" class="btn btn-outline-light btn-lg px-4 rounded-pill">Volver</a>
                 </div>
             </div>
         </div>
     </main>
 
-    <!--- Footer -->
+
     <footer class="footer-oscuro-total py-4">
         <div class="container">
             <div class="d-flex flex-wrap justify-content-between align-items-center border-top pt-4">
@@ -148,16 +110,16 @@
         const header = document.querySelector('.header-compacto');
 
         window.addEventListener('scroll', function() {
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-        // Detectamos si bajamos (ocultar) o subimos (mostrar)
+            // Detectamos si bajamos (ocultar) o subimos (mostrar)
         if (scrollTop > lastScrollTop && scrollTop > 100) {
             header.classList.add('header-hidden');
         } else {
             header.classList.remove('header-hidden');
         }
         lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-    }, false);
+        }, false);
     </script>
 
 </body>
