@@ -1,93 +1,71 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Únete a Nosotros - Asociación Nacional Amigos de los Animales</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro ANAA</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body class="bg-light bg-gradient min-vh-100">
+<body class="bg-white min-vh-100 d-flex flex-column">
 
-    <!-- CONTENIDO CENTRADO -->
-    <div class="d-flex justify-content-center align-items-center" style="height: 85vh;">
-        <div class="anaa-card shadow-lg rounded-4 p-5">
+  <!-- NAVBAR SIN LOGO -->
+  <nav class="navbar bg-body-tertiary mb-4">
+    <div class="container-fluid d-flex justify-content-end align-items-center">
 
-            <div class="anaa-logo shadow-sm mb-4"></div>
-            <h2 class="mb-4">Crea tu cuenta</h2>
+      <!-- BUSCADOR A LA DERECHA -->
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit">Buscar</button>
+      </form>
 
-            <form action="#" method="POST">
-                <div class="input-group-custom mb-4">
-                    <input type="text" name="nombre" class="form-control input-anaa py-3 mb-3" placeholder="Nombre completo" required>
-                    <input type="email" name="email" class="form-control input-anaa py-3 mb-3" placeholder="Dirección de correo electrónico" required>
-                    <input type="password" name="password" class="form-control input-anaa py-3" placeholder="Contraseña" required>
-                </div>
-
-                <button type="submit" class="btn-anaa mt-3">Registrarse</button>
-                <p class="text-muted small mt-3">Al registrarte aceptas nuestros términos y condiciones</p>
-            </form>
-
-            <!-- BOTÓN VOLVER (FUNCIONANDO) -->
-            <a href="../index.html" class="btn-anaa-dark mt-4 d-block text-center">
-                Volver a la página principal
-            </a>
-
-            <p class="footer-text mt-4">© 2026 ANAA Valencia</p>
-        </div>
     </div>
+  </nav>
 
-    <!-- FOOTER -->
-    <footer class="footer-oscuro-total py-4">
-        <div class="container">
-            <div class="d-flex flex-wrap justify-content-between align-items-center border-top pt-4">
-            
-                <p class="col-md-4 mb-0 text-claro">© 2024 ANAA - Amigos de los Animales</p>
+  <!-- CONTENIDO CENTRADO -->
+  <div class="container flex-grow-1 d-flex justify-content-center align-items-center">
+    <div class="row justify-content-center w-100">
+      <div class="col-md-6 col-lg-5">
+        <div class="card shadow-lg rounded-4 p-4 text-center">
 
-                <a href="../index.html" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto text-decoration-none">
-                    <img src="../img/ANAA.png" alt="ANAA" class="logo-footer-xl">
-                </a>
+          <div class="mb-4">
+            <img src="../img/ANAA.png" alt="ANAA" class="img-fluid" style="max-width: 80px;" />
+          </div>
 
-                <ul class="nav col-md-4 justify-content-end list-unstyled d-flex social-footer-final">
-                    <li class="ms-3">
-                        <a href="#" aria-label="Facebook">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 16 16">
-                                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
-                            </svg>
-                        </a>
-                    </li>
+          <h2 class="mb-4 fw-normal">Crea tu cuenta</h2>
 
-                    <li class="ms-3">
-                        <a href="#" aria-label="TikTok">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 16 16">
-                                <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/>
-                            </svg>
-                        </a>
-                    </li>
-
-                    <li class="ms-3">
-                        <a href="#" aria-label="Instagram">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 16 16">
-                                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.999 0z"/>
-                            </svg>
-                        </a>
-                    </li>
-
-                    <li class="ms-3">
-                        <a href="#" aria-label="X">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 16 16">
-                                <path d="M12.6 0h2.454l-5.36 6.142L16 16h-4.937l-3.867-5.07L2.777 16H.325l5.734-6.57L0 0h5.063l3.495 4.633L12.6 0z"/>
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
+          <form action="#" method="POST">
+            <div class="mb-3">
+              <input type="text" name="nombre" class="form-control form-control-lg" placeholder="Nombre completo" required>
             </div>
-        </div>
-    </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+            <div class="mb-3">
+              <input type="email" name="email" class="form-control form-control-lg" placeholder="Dirección de correo electrónico" required>
+            </div>
+
+            <div class="mb-3">
+              <input type="password" name="password" class="form-control form-control-lg" placeholder="Contraseña" required>
+            </div>
+
+            <button type="submit" class="btn w-100 text-white" style="background-color: #A3D133;">Registrarse</button>
+          </form>
+
+          <p class="text-muted small mt-3">
+
+          <a href="../index.html" class="btn w-100 mt-3 text-white" style="background-color: #2D572C;">
+            Volver a la página principal
+          </a>
+
+          <div class="mt-4 text-muted small">© 2026 ANAA Valencia</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-white text-center py-3 mt-4">
+    © 2026 ANAA - Amigos de los Animales
+  </footer>
 
 </body>
 </html>
