@@ -9,74 +9,104 @@
 
 <body class="bg-white min-vh-100 d-flex flex-column">
 
-  <!-- HEADER AÑADIDO -->
-  <header class="bg-dark text-white py-3 mb-3">
-    <div class="container d-flex justify-content-between align-items-center">
-      <h1 class="h4 m-0">ANAA</h1>
-      <nav>
-        <a href="../index.html" class="text-white me-3">Inicio</a>
-        <a href="#" class="text-white me-3">Servicios</a>
-        <a href="#" class="text-white">Contacto</a>
-      </nav>
-    </div>
+  <!-- HEADER AJUSTADO -->
+  <header class="border-bottom sticky-top bg-white">
+    <nav class="navbar navbar-expand-lg navbar-light w-100">
+      <div class="container d-flex align-items-center justify-content-between">
+
+        <!-- LOGO -->
+        <a class="navbar-brand p-0 d-flex align-items-center" href="../index.html">
+          <img src="../img/ANAA.png" alt="ANAA" style="height:48px;">
+        </a>
+
+        <!-- BOTÓN MÓVIL -->
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- CONTENIDO DEL HEADER -->
+        <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+
+          <!-- MENÚ CENTRADO -->
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item"><a class="nav-link px-3" href="quienes_somos.html">¿Quiénes somos?</a></li>
+            <li class="nav-item"><a class="nav-link px-3" href="comoAdoptar.html">¿Cómo adoptar?</a></li>
+            <li class="nav-item"><a class="nav-link px-3" href="contacto.html">Contacto</a></li>
+          </ul>
+
+          <!-- BUSCADOR + BOTONES -->
+          <div class="d-flex align-items-center gap-3">
+
+            <!-- BUSCADOR -->
+            <form class="d-flex" role="search">
+              <input class="form-control form-control-sm me-2" type="search" placeholder="Buscar">
+              <button class="btn btn-outline-success btn-sm" type="submit">Buscar</button>
+            </form>
+
+            <!-- BOTONES -->
+            <div class="d-flex align-items-center gap-2">
+              <a href="iniciarSesion.html" class="btn btn-outline-success btn-sm">Entrar</a>
+
+              <!-- HACERSE SOCIO EN NARANJA -->
+              <a href="hacerseSocio.html" class="btn btn-sm text-white" style="background-color:#F28C28;">
+                Hacerse socio
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </nav>
   </header>
 
-  <!-- NAVBAR SIN LOGO -->
-  <nav class="navbar bg-body-tertiary mb-4">
-    <div class="container-fluid d-flex justify-content-end align-items-center">
-
-      <!-- BUSCADOR A LA DERECHA -->
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Buscar</button>
-      </form>
-
-    </div>
-  </nav>
-
-  <!-- CONTENIDO CENTRADO -->
+  <!-- CONTENIDO -->
   <div class="container flex-grow-1 d-flex justify-content-center align-items-center">
     <div class="row justify-content-center w-100">
       <div class="col-md-6 col-lg-5">
         <div class="card shadow-lg rounded-4 p-4 text-center">
 
           <div class="mb-4">
-            <img src="../img/ANAA.png" alt="ANAA" class="img-fluid" style="max-width: 80px;" />
+            <img src="../img/ANAA.png" alt="ANAA" class="img-fluid" style="max-width: 80px;">
           </div>
 
           <h2 class="mb-4 fw-normal">Iniciar sesión</h2>
 
           <form action="#">
             <div class="mb-3">
-              <input type="email" class="form-control form-control-lg" placeholder="Dirección de correo electrónico" required />
+              <input type="email" class="form-control form-control-lg" placeholder="Dirección de correo electrónico" required>
             </div>
 
             <div class="mb-3">
-              <input type="password" class="form-control form-control-lg" placeholder="Contraseña" required />
+              <input type="password" class="form-control form-control-lg" placeholder="Contraseña" required>
             </div>
 
             <div class="form-check text-start mb-4">
-              <input class="form-check-input" type="checkbox" id="rememberMe" checked />
+              <input class="form-check-input" type="checkbox" id="rememberMe" checked>
               <label class="form-check-label" for="rememberMe">Acuérdate de mí</label>
             </div>
 
-            <button type="submit" class="btn w-100 text-white" style="background-color: #A3D133;">Iniciar sesión</button>
+            <button type="submit" class="btn w-100 text-white" style="background-color:#A3D133;">Iniciar sesión</button>
           </form>
 
-          <a href="../index.html" class="btn w-100 mt-3 text-white" style="background-color: #2D572C;">
+          <a href="../index.html" class="btn w-100 mt-3 text-white" style="background-color:#2D572C;">
             Volver a la página principal
           </a>
 
-          <div class="mt-4 text-muted small">© 2026 ANAA</div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- FOOTER ORIGINAL -->
-  <footer class="bg-dark text-white text-center py-3 mt-4">
-    © 2026 ANAA
+  <!-- FOOTER IGUAL AL DE LA IMAGEN -->
+  <footer class="py-4 mt-5 bg-white border-top">
+    <div class="container">
+      <div class="d-flex flex-wrap justify-content-center align-items-center pt-3">
+        <p class="mb-0 text-center text-dark">© 2024 ANAA</p>
+      </div>
+    </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
