@@ -118,6 +118,7 @@ h1, h2, h3, h4 {
     .navbar .container { 
         justify-content: space-between !important; 
     }
+    
 
     .navbar-toggler { 
         order: 1;
@@ -169,7 +170,7 @@ h1, h2, h3, h4 {
 
 @media (max-width: 575px) {
 
-    .logo-img { height: 35px; }
+    .logo-img { height: 40px; }
 
     .hero { padding-top: 6rem; }
 
